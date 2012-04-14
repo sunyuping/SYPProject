@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+<title>手机内嵌页面</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<style>
+html{
+	margin:0;
+    padding:0;
+	font-family:arial;
+	-webkit-text-size-adjust: none;
+}
+body{
+	margin:0;
+    background-color:#EFEFEF;
+}
+a {
+	text-decoration:none;
+	color:#005BAC;
+	font-size:12px;
+}
+div {
+	width:19.5em; 
+	margin:0 auto;
+}
+ul{
+	position:relative;
+	width:11em;	
+	list-style:none;
+	padding:0.5em 1em 1em 1em;
+	border:1pt #D1D4D9 solid;
+	-webkit-border-radius:8pt;
+	background:#E3EAF0;
+	float:left;
+	margin-top:7pt;
+	line-height:1.2em;
+}
+article {
+	float:left;
+	text-align:center;
+	margin:1em 0 0 1em;
+    width:5em;
+	overflow:hidden;
+}
+article img {
+	width:36pt;
+	height:36pt;
+	border:1pt #DFE2E5 solid;
+	-webkit-border-radius:10pt;
+    margin:1pt;
+	overflow:hidden;
+}
+span {
+        display:block;
+        width:39pt;
+        height:39pt;
+        overflow:hidden;
+		margin:0 auto;
+        border:1pt #DFE2E5 solid;
+        -webkit-border-radius:10pt;
+        -webkit-box-shadow:0pt 1pt 2pt #666;
+}
+article a {
+	display:block;
+    line-height:1.5em;
+    margin:0.5em 0;
+}
+li:nth-child(1) {
+	font-size:12px;
+	color:#333;
+}
+ul:after{
+	content:" ";
+	display:block;
+	width:0;
+	height:0;
+	overflow:hidden;
+	position:absolute;
+	top:2.5em;
+	right:-8pt;
+	border-right:none;
+	border-left:8pt #D1D4D9 solid;
+	border-top:5pt transparent solid;
+	border-bottom:5pt transparent solid;
+	z-index:1;
+}
+ul:before{
+	content:" ";
+	display:block;
+	width:0;
+	height:0;
+	overflow:hidden;
+	position:absolute;
+	top:2.6em;
+	right:-7pt;
+	z-index:2;
+	border-right:none;
+	border-left:7pt #E3EAF0 solid;
+	border-top:4pt transparent solid;
+	border-bottom:4pt transparent solid;
+}
+</style>
+</head>
+
+<body>
+<div>
+	<ul>
+		<li>登录将允许应用:</li>
+		<li><a href="#link">[des1]</a></li>
+		<li><a href="#link">[des2]</a></li>
+		<li><a href="#link">[des3]</a></li>
+	</ul>
+	<article>
+		<span><img src="[appIcon]" alt="图片"/></span><a href="#link">[appName]</a>
+	</article>
+</div>
+</body>
+</html>
