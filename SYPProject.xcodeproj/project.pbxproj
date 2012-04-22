@@ -130,6 +130,53 @@
 		9B0584CE14B3398000CF4DFC /* SYPProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SYPProject-Prefix.pch"; sourceTree = "<group>"; };
 		9B0584CF14B3398000CF4DFC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9B0584D014B3398000CF4DFC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9B23CFF01543E867009C9AB2 /* AVCamCaptureManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVCamCaptureManager.h; sourceTree = "<group>"; };
+		9B23CFF11543E867009C9AB2 /* AVCamCaptureManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AVCamCaptureManager.mm; sourceTree = "<group>"; };
+		9B23CFF21543E867009C9AB2 /* AVCamPreviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVCamPreviewView.h; sourceTree = "<group>"; };
+		9B23CFF31543E867009C9AB2 /* AVCamPreviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVCamPreviewView.m; sourceTree = "<group>"; };
+		9B23CFF41543E867009C9AB2 /* AVCamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVCamViewController.h; sourceTree = "<group>"; };
+		9B23CFF51543E867009C9AB2 /* AVCamViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AVCamViewController.mm; sourceTree = "<group>"; };
+		9B23D0331543E940009C9AB2 /* SYPSystemExpansion.h */ = {isa = PBXFileReference; name = SYPSystemExpansion.h; path = Categories/SYPSystemExpansion.h; sourceTree = "<group>"; };
+		9B23D0341543E940009C9AB2 /* GTMBase64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTMBase64.h; path = Categories/GTMBase64.h; sourceTree = "<group>"; };
+		9B23D0351543E940009C9AB2 /* GTMBase64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GTMBase64.m; path = Categories/GTMBase64.m; sourceTree = "<group>"; };
+		9B23D0361543E940009C9AB2 /* GTMDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = Categories/GTMDefines.h; sourceTree = "<group>"; };
+		9B23D0371543E940009C9AB2 /* NSArray+RNAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSArray+RNAdditions.h"; path = "Categories/NSArray+RNAdditions.h"; sourceTree = "<group>"; };
+		9B23D0381543E940009C9AB2 /* NSArray+RNAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSArray+RNAdditions.m"; path = "Categories/NSArray+RNAdditions.m"; sourceTree = "<group>"; };
+		9B23D0391543E940009C9AB2 /* NSData+CocoaDevUsersAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSData+CocoaDevUsersAdditions.h"; path = "Categories/NSData+CocoaDevUsersAdditions.h"; sourceTree = "<group>"; };
+		9B23D03A1543E940009C9AB2 /* NSData+CocoaDevUsersAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSData+CocoaDevUsersAdditions.m"; path = "Categories/NSData+CocoaDevUsersAdditions.m"; sourceTree = "<group>"; };
+		9B23D03B1543E940009C9AB2 /* NSData+TTCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSData+TTCategory.h"; path = "Categories/NSData+TTCategory.h"; sourceTree = "<group>"; };
+		9B23D03C1543E940009C9AB2 /* NSData+TTCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSData+TTCategory.m"; path = "Categories/NSData+TTCategory.m"; sourceTree = "<group>"; };
+		9B23D03D1543E940009C9AB2 /* NSDate+NSDateExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSDate+NSDateExt.h"; path = "Categories/NSDate+NSDateExt.h"; sourceTree = "<group>"; };
+		9B23D03E1543E940009C9AB2 /* NSDate+NSDateExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSDate+NSDateExt.m"; path = "Categories/NSDate+NSDateExt.m"; sourceTree = "<group>"; };
+		9B23D03F1543E940009C9AB2 /* NSDate+TTCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSDate+TTCategory.h"; path = "Categories/NSDate+TTCategory.h"; sourceTree = "<group>"; };
+		9B23D0401543E940009C9AB2 /* NSDate+TTCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSDate+TTCategory.m"; path = "Categories/NSDate+TTCategory.m"; sourceTree = "<group>"; };
+		9B23D0411543E940009C9AB2 /* NSDictionary+RNAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+RNAdditions.h"; path = "Categories/NSDictionary+RNAdditions.h"; sourceTree = "<group>"; };
+		9B23D0421543E940009C9AB2 /* NSDictionary+RNAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+RNAdditions.m"; path = "Categories/NSDictionary+RNAdditions.m"; sourceTree = "<group>"; };
+		9B23D0431543E940009C9AB2 /* NSObject+RNAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSObject+RNAdditions.h"; path = "Categories/NSObject+RNAdditions.h"; sourceTree = "<group>"; };
+		9B23D0441543E940009C9AB2 /* NSObject+RNAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSObject+RNAdditions.m"; path = "Categories/NSObject+RNAdditions.m"; sourceTree = "<group>"; };
+		9B23D0451543E940009C9AB2 /* NSString+NSStringEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSString+NSStringEx.h"; path = "Categories/NSString+NSStringEx.h"; sourceTree = "<group>"; };
+		9B23D0461543E940009C9AB2 /* NSString+NSStringEx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+NSStringEx.m"; path = "Categories/NSString+NSStringEx.m"; sourceTree = "<group>"; };
+		9B23D0471543E940009C9AB2 /* NSString+TTAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSString+TTAdditions.h"; path = "Categories/NSString+TTAdditions.h"; sourceTree = "<group>"; };
+		9B23D0481543E940009C9AB2 /* NSString+TTAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+TTAdditions.m"; path = "Categories/NSString+TTAdditions.m"; sourceTree = "<group>"; };
+		9B23D0491543E940009C9AB2 /* TTCorePreprocessorMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTCorePreprocessorMacros.h; path = Categories/TTCorePreprocessorMacros.h; sourceTree = "<group>"; };
+		9B23D04A1543E940009C9AB2 /* TTDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTDebug.h; path = Categories/TTDebug.h; sourceTree = "<group>"; };
+		9B23D04B1543E940009C9AB2 /* TTDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TTDebug.m; path = Categories/TTDebug.m; sourceTree = "<group>"; };
+		9B23D04C1543E940009C9AB2 /* TTEntityTables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTEntityTables.h; path = Categories/TTEntityTables.h; sourceTree = "<group>"; };
+		9B23D04D1543E940009C9AB2 /* TTEntityTables.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TTEntityTables.m; path = Categories/TTEntityTables.m; sourceTree = "<group>"; };
+		9B23D04E1543E940009C9AB2 /* TTGlobalCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTGlobalCore.h; path = Categories/TTGlobalCore.h; sourceTree = "<group>"; };
+		9B23D04F1543E940009C9AB2 /* TTGlobalCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TTGlobalCore.m; path = Categories/TTGlobalCore.m; sourceTree = "<group>"; };
+		9B23D0501543E940009C9AB2 /* TTGlobalCoreLocale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTGlobalCoreLocale.h; path = Categories/TTGlobalCoreLocale.h; sourceTree = "<group>"; };
+		9B23D0511543E940009C9AB2 /* TTGlobalCoreLocale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TTGlobalCoreLocale.m; path = Categories/TTGlobalCoreLocale.m; sourceTree = "<group>"; };
+		9B23D0521543E940009C9AB2 /* TTMarkupStripper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTMarkupStripper.h; path = Categories/TTMarkupStripper.h; sourceTree = "<group>"; };
+		9B23D0531543E940009C9AB2 /* TTMarkupStripper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TTMarkupStripper.m; path = Categories/TTMarkupStripper.m; sourceTree = "<group>"; };
+		9B23D0541543E940009C9AB2 /* UIActionSheet+RNAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIActionSheet+RNAdditions.h"; path = "Categories/UIActionSheet+RNAdditions.h"; sourceTree = "<group>"; };
+		9B23D0551543E940009C9AB2 /* UIActionSheet+RNAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIActionSheet+RNAdditions.m"; path = "Categories/UIActionSheet+RNAdditions.m"; sourceTree = "<group>"; };
+		9B23D0561543E940009C9AB2 /* UIDevice+UIDeviceExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIDevice+UIDeviceExt.h"; path = "Categories/UIDevice+UIDeviceExt.h"; sourceTree = "<group>"; };
+		9B23D0571543E940009C9AB2 /* UIDevice+UIDeviceExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+UIDeviceExt.m"; path = "Categories/UIDevice+UIDeviceExt.m"; sourceTree = "<group>"; };
+		9B23D0581543E940009C9AB2 /* UIImage+RNAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIImage+RNAdditions.h"; path = "Categories/UIImage+RNAdditions.h"; sourceTree = "<group>"; };
+		9B23D0591543E940009C9AB2 /* UIImage+RNAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIImage+RNAdditions.m"; path = "Categories/UIImage+RNAdditions.m"; sourceTree = "<group>"; };
+		9B23D05A1543E940009C9AB2 /* UIView+RNAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+RNAdditions.h"; path = "Categories/UIView+RNAdditions.h"; sourceTree = "<group>"; };
+		9B23D05B1543E940009C9AB2 /* UIView+RNAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIView+RNAdditions.m"; path = "Categories/UIView+RNAdditions.m"; sourceTree = "<group>"; };
 		9B351DC414C3C3E0002F8283 /* RRFileHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFileHandle.h; sourceTree = "<group>"; };
 		9B351DC514C3C3E0002F8283 /* RRFileHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRFileHandle.m; sourceTree = "<group>"; };
 		9B351DC614C3C3E0002F8283 /* RRFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRFileManager.h; sourceTree = "<group>"; };
@@ -316,12 +363,6 @@
 		9BC198C314B44C080052E6EA /* RRDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRDefines.h; sourceTree = "<group>"; };
 		9BCC4B0714C5622600436F64 /* RRException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRException.h; sourceTree = "<group>"; };
 		9BCC4B0814C5622600436F64 /* RRException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRException.m; sourceTree = "<group>"; };
-		9BD478C3150EEEE7007025CB /* AVCamCaptureManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVCamCaptureManager.h; sourceTree = SOURCE_ROOT; };
-		9BD478C4150EEEE7007025CB /* AVCamCaptureManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AVCamCaptureManager.mm; sourceTree = SOURCE_ROOT; };
-		9BD478C5150EEEE7007025CB /* AVCamPreviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVCamPreviewView.h; sourceTree = SOURCE_ROOT; };
-		9BD478C6150EEEE7007025CB /* AVCamPreviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVCamPreviewView.m; sourceTree = SOURCE_ROOT; };
-		9BD478C7150EEEE7007025CB /* AVCamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVCamViewController.h; sourceTree = SOURCE_ROOT; };
-		9BD478C8150EEEE7007025CB /* AVCamViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AVCamViewController.mm; sourceTree = SOURCE_ROOT; };
 		9BD6167214C3E7E700CA31BA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		9BD6167F14C3EDC400CA31BA /* RRPathManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRPathManager.h; sourceTree = "<group>"; };
 		9BD6168014C3EDC400CA31BA /* RRPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRPathManager.m; sourceTree = "<group>"; };
@@ -502,6 +543,47 @@
 		9B0584D814B3419100CF4DFC /* SystemExpansion */ = {
 			isa = PBXGroup;
 			children = (
+				9B23D0331543E940009C9AB2 /* SYPSystemExpansion.h */,
+				9B23D0341543E940009C9AB2 /* GTMBase64.h */,
+				9B23D0351543E940009C9AB2 /* GTMBase64.m */,
+				9B23D0361543E940009C9AB2 /* GTMDefines.h */,
+				9B23D0371543E940009C9AB2 /* NSArray+RNAdditions.h */,
+				9B23D0381543E940009C9AB2 /* NSArray+RNAdditions.m */,
+				9B23D0391543E940009C9AB2 /* NSData+CocoaDevUsersAdditions.h */,
+				9B23D03A1543E940009C9AB2 /* NSData+CocoaDevUsersAdditions.m */,
+				9B23D03B1543E940009C9AB2 /* NSData+TTCategory.h */,
+				9B23D03C1543E940009C9AB2 /* NSData+TTCategory.m */,
+				9B23D03D1543E940009C9AB2 /* NSDate+NSDateExt.h */,
+				9B23D03E1543E940009C9AB2 /* NSDate+NSDateExt.m */,
+				9B23D03F1543E940009C9AB2 /* NSDate+TTCategory.h */,
+				9B23D0401543E940009C9AB2 /* NSDate+TTCategory.m */,
+				9B23D0411543E940009C9AB2 /* NSDictionary+RNAdditions.h */,
+				9B23D0421543E940009C9AB2 /* NSDictionary+RNAdditions.m */,
+				9B23D0431543E940009C9AB2 /* NSObject+RNAdditions.h */,
+				9B23D0441543E940009C9AB2 /* NSObject+RNAdditions.m */,
+				9B23D0451543E940009C9AB2 /* NSString+NSStringEx.h */,
+				9B23D0461543E940009C9AB2 /* NSString+NSStringEx.m */,
+				9B23D0471543E940009C9AB2 /* NSString+TTAdditions.h */,
+				9B23D0481543E940009C9AB2 /* NSString+TTAdditions.m */,
+				9B23D0491543E940009C9AB2 /* TTCorePreprocessorMacros.h */,
+				9B23D04A1543E940009C9AB2 /* TTDebug.h */,
+				9B23D04B1543E940009C9AB2 /* TTDebug.m */,
+				9B23D04C1543E940009C9AB2 /* TTEntityTables.h */,
+				9B23D04D1543E940009C9AB2 /* TTEntityTables.m */,
+				9B23D04E1543E940009C9AB2 /* TTGlobalCore.h */,
+				9B23D04F1543E940009C9AB2 /* TTGlobalCore.m */,
+				9B23D0501543E940009C9AB2 /* TTGlobalCoreLocale.h */,
+				9B23D0511543E940009C9AB2 /* TTGlobalCoreLocale.m */,
+				9B23D0521543E940009C9AB2 /* TTMarkupStripper.h */,
+				9B23D0531543E940009C9AB2 /* TTMarkupStripper.m */,
+				9B23D0541543E940009C9AB2 /* UIActionSheet+RNAdditions.h */,
+				9B23D0551543E940009C9AB2 /* UIActionSheet+RNAdditions.m */,
+				9B23D0561543E940009C9AB2 /* UIDevice+UIDeviceExt.h */,
+				9B23D0571543E940009C9AB2 /* UIDevice+UIDeviceExt.m */,
+				9B23D0581543E940009C9AB2 /* UIImage+RNAdditions.h */,
+				9B23D0591543E940009C9AB2 /* UIImage+RNAdditions.m */,
+				9B23D05A1543E940009C9AB2 /* UIView+RNAdditions.h */,
+				9B23D05B1543E940009C9AB2 /* UIView+RNAdditions.m */,
 				9BFAE20E1533FE48008D9E80 /* RichTextKit */,
 				9BFFDD131518268D00F76865 /* CTGradient.h */,
 				9BFFDD141518268D00F76865 /* CTGradient.m */,
@@ -806,12 +888,12 @@
 		9BD478C2150EEED7007025CB /* testav */ = {
 			isa = PBXGroup;
 			children = (
-				9BD478C3150EEEE7007025CB /* AVCamCaptureManager.h */,
-				9BD478C4150EEEE7007025CB /* AVCamCaptureManager.mm */,
-				9BD478C5150EEEE7007025CB /* AVCamPreviewView.h */,
-				9BD478C6150EEEE7007025CB /* AVCamPreviewView.m */,
-				9BD478C7150EEEE7007025CB /* AVCamViewController.h */,
-				9BD478C8150EEEE7007025CB /* AVCamViewController.mm */,
+				9B23CFF01543E867009C9AB2 /* AVCamCaptureManager.h */,
+				9B23CFF11543E867009C9AB2 /* AVCamCaptureManager.mm */,
+				9B23CFF21543E867009C9AB2 /* AVCamPreviewView.h */,
+				9B23CFF31543E867009C9AB2 /* AVCamPreviewView.m */,
+				9B23CFF41543E867009C9AB2 /* AVCamViewController.h */,
+				9B23CFF51543E867009C9AB2 /* AVCamViewController.mm */,
 			);
 			name = testav;
 			sourceTree = "<group>";

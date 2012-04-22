@@ -12,10 +12,13 @@
 
 @end
 // 阿狸表情转义符内容及顺序
-static NSString *aliEmotions = @"(阿狸-hi),(阿狸-幸福),(阿狸-挨揍),(阿狸-拜拜),(阿狸-汗),(阿狸-洒泪),(阿狸-晕乎乎),(阿狸-吃饭),(阿狸-呼噜),(阿狸-亲元宝),(阿狸-拖走),(阿狸-爱情),(阿狸-来亲个),(阿狸-献花),(阿狸-礼物),(阿狸-压力)";
+static NSString *aliEmotions = @"[al01],[al06],[al08],[al09],[al10],[al11],[al15],[al16],[al17],[al18],[al19],[al20],[al21],[al22],[al24],[al28],[al29],[al31],[al33],[al34],[al35],[al36],[al38],[al39],[al40],[al41],[al42],[al43],[al44],[al45],[al46],[al47],[al48],[al49],[al50],[al51]";
 
 // 囧囧熊表情转义符内容及顺序
 static NSString *jjEmotions = @"[jj01],[jj02],[jj03],[jj04],[jj05],[jj06],[jj07],[jj08],[jj09],[jj10],[jj11],[jj12],[jj13],[jj14],[jj15],[jj16],[jj17],[jj18],[jj19]";
+
+
+
 
 @implementation RichTextKitViewController
 

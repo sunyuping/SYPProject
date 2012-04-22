@@ -173,19 +173,6 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "SYPProject/RichTextKitViewController.m"
-         timestampString = "355890313.163429"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "63"
-         endingLineNumber = "63"
-         landmarkName = "-viewDidLoad"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "SYPProject/Test_downloadViewController.m"
          timestampString = "355987990.747109"
          startingColumnNumber = "9223372036854775807"
@@ -193,19 +180,6 @@
          startingLineNumber = "40"
          endingLineNumber = "40"
          landmarkName = "-viewDidLoad"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "SYPProject/FileDownload/RNFileDownLode.m"
-         timestampString = "355989410.436114"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "33"
-         endingLineNumber = "33"
-         landmarkName = "-start"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint

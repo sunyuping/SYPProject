@@ -55,9 +55,9 @@
 //    
    // FreemojiController *mytestviewcontrol = [[FreemojiController alloc]init];
     
-   // RichTextKitViewController *mytestviewcontrol = [[RichTextKitViewController alloc]init];
+    RichTextKitViewController *mytestviewcontrol = [[RichTextKitViewController alloc]init];
     
-    Test_downloadViewController *mytestviewcontrol = [[Test_downloadViewController alloc]init];
+    //Test_downloadViewController *mytestviewcontrol = [[Test_downloadViewController alloc]init];
     
     self.window.rootViewController = mytestviewcontrol;
     [mytestviewcontrol release];
