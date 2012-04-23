@@ -136,7 +136,7 @@
 		9B23CFF31543E867009C9AB2 /* AVCamPreviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVCamPreviewView.m; sourceTree = "<group>"; };
 		9B23CFF41543E867009C9AB2 /* AVCamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVCamViewController.h; sourceTree = "<group>"; };
 		9B23CFF51543E867009C9AB2 /* AVCamViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AVCamViewController.mm; sourceTree = "<group>"; };
-		9B23D0331543E940009C9AB2 /* SYPSystemExpansion.h */ = {isa = PBXFileReference; name = SYPSystemExpansion.h; path = Categories/SYPSystemExpansion.h; sourceTree = "<group>"; };
+		9B23D0331543E940009C9AB2 /* SYPSystemExpansion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SYPSystemExpansion.h; path = Categories/SYPSystemExpansion.h; sourceTree = "<group>"; };
 		9B23D0341543E940009C9AB2 /* GTMBase64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTMBase64.h; path = Categories/GTMBase64.h; sourceTree = "<group>"; };
 		9B23D0351543E940009C9AB2 /* GTMBase64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GTMBase64.m; path = Categories/GTMBase64.m; sourceTree = "<group>"; };
 		9B23D0361543E940009C9AB2 /* GTMDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = Categories/GTMDefines.h; sourceTree = "<group>"; };
