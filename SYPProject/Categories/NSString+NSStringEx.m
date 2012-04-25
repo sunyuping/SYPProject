@@ -1013,5 +1013,20 @@ NSInteger strCompare(id str1, id str2, void *context)
     NSString *string5 = [string4 stringByReplacingOccurrencesOfString:@"&apos;" withString:@"'"];
 	return string5;
 }
-
+-(NSInteger)CountWord{
+    int i,n=[self length],l=0,a=0,b=0;
+    unichar c;
+    for(i=0;i<n;i++){
+        c=[self characterAtIndex:i];
+        if(isblank(c)){
+            b++;
+        }else if(isascii(c)){
+            a++;
+        }else{
+            l++;
+        }
+    }
+    if(a==0 && l==0) return 0;
+    return l+(NSInteger)ceilf((float)(a+b)/2.0);
+}
 @end

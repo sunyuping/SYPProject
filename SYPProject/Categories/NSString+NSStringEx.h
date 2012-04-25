@@ -177,4 +177,11 @@ NSInteger strCompare(id str1, id str2, void *context);
  */
 - (NSString*) stringByDecodeAes;
 
+/*
+ *
+ *
+ */
+
+-(NSInteger)CountWord;
+
 @end
