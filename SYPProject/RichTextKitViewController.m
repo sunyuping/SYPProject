@@ -49,6 +49,10 @@ static NSString *jjEmotions = @"[jj01],[jj02],[jj03],[jj04],[jj05],[jj06],[jj07]
     
     [self.view addSubview:_textview];
     
+    NSString *shaoping = @"CIAC005740";
+    NSString *md5shao = [shaoping md5];
+    NSLog(@"syp===md5shao=%@",md5shao);
+    
     NSMutableArray *md5name =[NSMutableArray arrayWithCapacity:20];
     
     NSArray *defaultEmotionsArray = [aliEmotions componentsSeparatedByString:@","];

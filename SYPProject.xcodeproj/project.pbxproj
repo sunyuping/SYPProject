@@ -104,6 +104,8 @@
 		9BD7746514BD7947006B9F80 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD7746414BD7947006B9F80 /* Security.framework */; };
 		9BD7748714BD7A52006B9F80 /* Test_MKNetworkKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD7748614BD7A52006B9F80 /* Test_MKNetworkKit.m */; };
 		9BE08A7914C023BA00E45882 /* RRUIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE08A7814C023BA00E45882 /* RRUIImageView.m */; };
+		9BE44B211552B2F9005065DD /* XBFilteredCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE44B1D1552B23A005065DD /* XBFilteredCameraView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		9BE44B221552B2F9005065DD /* XBFilteredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE44B201552B254005065DD /* XBFilteredView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		9BEB2DD114B571C300EF5BA9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BEB2DD014B571C200EF5BA9 /* GameKit.framework */; };
 		9BEB2DD414B572A100EF5BA9 /* RRLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BEB2DD314B572A100EF5BA9 /* RRLocation.m */; };
 		9BF6C7DC15330EA2003EF037 /* FreemojiController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF6C7DB15330EA2003EF037 /* FreemojiController.m */; };
@@ -373,6 +375,10 @@
 		9BD7748614BD7A52006B9F80 /* Test_MKNetworkKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test_MKNetworkKit.m; sourceTree = "<group>"; };
 		9BE08A7714C023BA00E45882 /* RRUIImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRUIImageView.h; sourceTree = "<group>"; };
 		9BE08A7814C023BA00E45882 /* RRUIImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRUIImageView.m; sourceTree = "<group>"; };
+		9BE44B1C1552B239005065DD /* XBFilteredCameraView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBFilteredCameraView.h; sourceTree = "<group>"; };
+		9BE44B1D1552B23A005065DD /* XBFilteredCameraView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBFilteredCameraView.m; sourceTree = "<group>"; };
+		9BE44B1F1552B254005065DD /* XBFilteredView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBFilteredView.h; sourceTree = "<group>"; };
+		9BE44B201552B254005065DD /* XBFilteredView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBFilteredView.m; sourceTree = "<group>"; };
 		9BEB2DD014B571C200EF5BA9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		9BEB2DD214B572A100EF5BA9 /* RRLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRLocation.h; sourceTree = "<group>"; };
 		9BEB2DD314B572A100EF5BA9 /* RRLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRLocation.m; sourceTree = "<group>"; };
@@ -894,6 +900,10 @@
 				9B23CFF31543E867009C9AB2 /* AVCamPreviewView.m */,
 				9B23CFF41543E867009C9AB2 /* AVCamViewController.h */,
 				9B23CFF51543E867009C9AB2 /* AVCamViewController.mm */,
+				9BE44B1C1552B239005065DD /* XBFilteredCameraView.h */,
+				9BE44B1D1552B23A005065DD /* XBFilteredCameraView.m */,
+				9BE44B1F1552B254005065DD /* XBFilteredView.h */,
+				9BE44B201552B254005065DD /* XBFilteredView.m */,
 			);
 			name = testav;
 			sourceTree = "<group>";
@@ -1029,6 +1039,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE44B211552B2F9005065DD /* XBFilteredCameraView.m in Sources */,
+				9BE44B221552B2F9005065DD /* XBFilteredView.m in Sources */,
 				9BA539EC1537F056000F24CA /* RNFileDownLode.m in Sources */,
 				9B99CCDF1519E44600F1F5E4 /* TestRenRenLBSViewController.m in Sources */,
 				9B0584CD14B3398000CF4DFC /* main.m in Sources */,
