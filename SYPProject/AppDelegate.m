@@ -18,6 +18,8 @@
 
 #import "Test_downloadViewController.h"
 
+#import "SYPTestAvCameraViewController.h"
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -55,9 +57,11 @@
 //    
    // FreemojiController *mytestviewcontrol = [[FreemojiController alloc]init];
     
-    RichTextKitViewController *mytestviewcontrol = [[RichTextKitViewController alloc]init];
+   // RichTextKitViewController *mytestviewcontrol = [[RichTextKitViewController alloc]init];
     
     //Test_downloadViewController *mytestviewcontrol = [[Test_downloadViewController alloc]init];
+    
+    SYPTestAvCameraViewController *mytestviewcontrol = [[SYPTestAvCameraViewController alloc]init];
     
     self.window.rootViewController = mytestviewcontrol;
     [mytestviewcontrol release];
