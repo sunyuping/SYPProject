@@ -110,6 +110,7 @@
 		9BBD6E971552D6610058EEBD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBD6E961552D6610058EEBD /* OpenGLES.framework */; };
 		9BBD6E991552D6750058EEBD /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBD6E981552D6750058EEBD /* GLKit.framework */; };
 		9BBD6E9C1552DA4E0058EEBD /* SYPTestAvCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBD6E9B1552DA4E0058EEBD /* SYPTestAvCameraViewController.m */; };
+		9BC150F9155B874700276206 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC150F8155B874700276206 /* CoreTelephony.framework */; };
 		9BC1986014B3F0C40052E6EA /* RRAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC1985F14B3F0C40052E6EA /* RRAttributedLabel.m */; };
 		9BC1986614B3F7BE0052E6EA /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC1986514B3F7BE0052E6EA /* CoreText.framework */; };
 		9BC1986E14B3F88F0052E6EA /* MyTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC1986D14B3F88F0052E6EA /* MyTestViewController.m */; };
@@ -398,6 +399,7 @@
 		9BBD6E981552D6750058EEBD /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		9BBD6E9A1552DA4D0058EEBD /* SYPTestAvCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPTestAvCameraViewController.h; sourceTree = "<group>"; };
 		9BBD6E9B1552DA4E0058EEBD /* SYPTestAvCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPTestAvCameraViewController.m; sourceTree = "<group>"; };
+		9BC150F8155B874700276206 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		9BC1985E14B3F0C40052E6EA /* RRAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRAttributedLabel.h; sourceTree = "<group>"; };
 		9BC1985F14B3F0C40052E6EA /* RRAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRAttributedLabel.m; sourceTree = "<group>"; };
 		9BC1986514B3F7BE0052E6EA /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -455,6 +457,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BC150F9155B874700276206 /* CoreTelephony.framework in Frameworks */,
 				9BBD6E991552D6750058EEBD /* GLKit.framework in Frameworks */,
 				9BBD6E971552D6610058EEBD /* OpenGLES.framework in Frameworks */,
 				9B99CCDE1519E3C200F1F5E4 /* MessageUI.framework in Frameworks */,
@@ -486,6 +489,7 @@
 		9B0584B114B3398000CF4DFC = {
 			isa = PBXGroup;
 			children = (
+				9BC150F8155B874700276206 /* CoreTelephony.framework */,
 				9B81A5161519DE9C00C62931 /* RenRenLbsSDK */,
 				9B60A9A714D9012300B5670C /* MKNetworkKit */,
 				9B0584C614B3398000CF4DFC /* SYPProject */,

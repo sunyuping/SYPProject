@@ -20,6 +20,8 @@
 
 #import "SYPTestAvCameraViewController.h"
 
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -32,6 +34,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //获取当前运营商信息。需要4。0以上
+    CTTelephonyNetworkInfo *info = [[CTTelephonyNetworkInfo alloc] init];
+    CTCarrier *carrier = info.subscriberCellularProvider;
+    NSLog(@"carrier:%@", [carrier description]);
+    //运营商切换通知
+    info.subscriberCellularProviderDidUpdateNotifier = ^(CTCarrier *carrier) { 
+        NSLog ( @"carrier:%@" , [carrier description]);
+    };
+
+//    CTCallCenter *center = [[CTCallCenter alloc] init];
+//    center.callEventHandler = ^(CTCall *call) {
+//        NSLog ( @"call:%@" , [call description]);
+//    };
+//    
+    
     //注册单件类
     RRSingleton *mysingle = [RRSingleton defaultSingleton];
     RRException *myex = [RRException defaultException];
@@ -57,11 +74,11 @@
 //    
    // FreemojiController *mytestviewcontrol = [[FreemojiController alloc]init];
     
-   // RichTextKitViewController *mytestviewcontrol = [[RichTextKitViewController alloc]init];
+    RichTextKitViewController *mytestviewcontrol = [[RichTextKitViewController alloc]init];
     
     //Test_downloadViewController *mytestviewcontrol = [[Test_downloadViewController alloc]init];
     
-    SYPTestAvCameraViewController *mytestviewcontrol = [[SYPTestAvCameraViewController alloc]init];
+  //  SYPTestAvCameraViewController *mytestviewcontrol = [[SYPTestAvCameraViewController alloc]init];
     
     self.window.rootViewController = mytestviewcontrol;
     [mytestviewcontrol release];
