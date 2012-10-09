@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "RRException.h"
-#import "RMConnectCenter.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate,RRExceptionProtocol,RenrenMobileDelegate>//
+@interface AppDelegate : UIResponder <UIApplicationDelegate,RRExceptionProtocol>//
 
 @property (strong, nonatomic) UIWindow *window;
 

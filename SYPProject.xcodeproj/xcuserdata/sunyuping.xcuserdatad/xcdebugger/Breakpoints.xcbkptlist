@@ -287,15 +287,15 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SYPProject/AppDelegate.m"
-         timestampString = "358320936.720226"
+         timestampString = "371438303.516865"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "81"
-         endingLineNumber = "81"
+         startingLineNumber = "80"
+         endingLineNumber = "80"
          landmarkName = "-application:didFinishLaunchingWithOptions:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -512,11 +512,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SYPProject/AppDelegate.m"
-         timestampString = "358320092.614395"
+         timestampString = "371438303.516865"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "38"
-         endingLineNumber = "38"
+         startingLineNumber = "37"
+         endingLineNumber = "37"
          landmarkName = "-application:didFinishLaunchingWithOptions:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -525,11 +525,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SYPProject/AppDelegate.m"
-         timestampString = "358320936.720226"
+         timestampString = "371438303.516865"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "43"
-         endingLineNumber = "43"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
          landmarkName = "-application:didFinishLaunchingWithOptions:"
          landmarkType = "5">
          <Locations>
@@ -564,11 +564,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SYPProject/AppDelegate.m"
-         timestampString = "358320914.038109"
+         timestampString = "371438303.516865"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "43"
-         endingLineNumber = "43"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
          landmarkName = "-application:didFinishLaunchingWithOptions:"
          landmarkType = "5">
       </FileBreakpoint>

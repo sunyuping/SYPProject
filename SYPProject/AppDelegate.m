@@ -10,7 +10,6 @@
 #import "MyTestViewController.h"
 #import "Test_MKNetworkKit.h"
 //#import "TestKeDaViewController.h"
-#import "TestRenRenLBSViewController.h"
 #import "RRCameraViewController.h"
 
 #import "FreemojiController.h"
@@ -103,13 +102,13 @@
     }    
     return NO;
 }
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
-    return [[RMConnectCenter sharedCenter] handleOpenURL:url];
-}
-
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-    return [[RMConnectCenter sharedCenter] handleOpenURL:url];
-}
+//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+//   // return [[RMConnectCenter sharedCenter] handleOpenURL:url];
+//}
+//
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+//    return [[RMConnectCenter sharedCenter] handleOpenURL:url];
+//}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -138,16 +137,5 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-- (void)reAuthVerifyUserFailWithError:(RMError *)error{
-    if (error) {
-        //为了更好的用户体验，当发生此种错误时用户可能无法正常使用人人网的服务，请要求用户重新登陆。
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"人人网用户登陆已失效" 
-                                                        message:[error localizedDescription]
-                                                       delegate:nil 
-                                              cancelButtonTitle:@"确定" 
-                                              otherButtonTitles:nil];
-        [alert show];
-        [alert release];
-    }
-}
+
 @end
