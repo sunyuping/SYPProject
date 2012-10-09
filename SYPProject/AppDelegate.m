@@ -66,11 +66,6 @@
     //测试拍照
     //RRCameraViewController *mytestviewcontrol = [[RRCameraViewController alloc] init];
     
-    //测试人人lbssdk
-    //初始化sdk
-//    [RMConnectCenter initializeConnectWithAPIKey:@"e884884ac90c4182a426444db12915bf" secretKey:@"094de55dc157411e8a5435c6a7c134c5" appId:@"168802" mobileDelegate:self];
-//    TestRenRenLBSViewController *mytestviewcontrol = [[TestRenRenLBSViewController alloc] init];
-//    
    // FreemojiController *mytestviewcontrol = [[FreemojiController alloc]init];
     
     RichTextKitViewController *mytestviewcontrol = [[RichTextKitViewController alloc]init];
