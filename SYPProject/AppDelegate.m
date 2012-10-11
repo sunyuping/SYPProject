@@ -21,6 +21,7 @@
 
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 
+#import "UncaughtExceptionHandler.h"
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -30,7 +31,13 @@
     [_window release];
     [super dealloc];
 }
+- (void)installUncaughtExceptionHandler
 
+{
+    
+	InstallUncaughtExceptionHandler();
+    
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //获取当前运营商信息。需要4。0以上
@@ -50,8 +57,11 @@
     
     //注册单件类
     RRSingleton *mysingle = [RRSingleton defaultSingleton];
+    //注册崩溃事件监听，
     RRException *myex = [RRException defaultException];
     myex.delegate = self;
+    //注册崩溃事件监听2.。。
+    [self installUncaughtExceptionHandler];
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.

@@ -65,11 +65,20 @@ static NSString *jjEmotions = @"[jj01],[jj02],[jj03],[jj04],[jj05],[jj06],[jj07]
         [md5name addObject:[escapeCode11 md5]];
     }
     
-    NSLog(@"syp=%@",md5name);
+   // NSLog(@"syp=%@",md5name);
     
     [_textview release];
+    
+    UIButton *test = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    test.frame = CGRectMake(10, 100, 100, 100);
+    [self.view addSubview:test];
+    [test addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchDown];
+    
 }
-
+-(void)test:(UIButton*)btn{
+     [self performSelector:@selector(aaaa)];
+    
+}
 - (void)viewDidUnload
 {
     [super viewDidUnload];

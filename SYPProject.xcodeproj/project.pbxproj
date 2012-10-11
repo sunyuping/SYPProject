@@ -12,6 +12,7 @@
 		9B0584C514B3398000CF4DFC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0584C414B3398000CF4DFC /* CoreGraphics.framework */; };
 		9B0584CD14B3398000CF4DFC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0584CC14B3398000CF4DFC /* main.m */; };
 		9B0584D114B3398000CF4DFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0584D014B3398000CF4DFC /* AppDelegate.m */; };
+		9B17F4881623C31E00AA9B0D /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B17F4861623C31E00AA9B0D /* UncaughtExceptionHandler.m */; };
 		9B2EC1D71552E39500727FF4 /* DefaultFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 9B2EC1CF1552E39500727FF4 /* DefaultFragmentShader.glsl */; };
 		9B2EC1D81552E39500727FF4 /* DefaultVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 9B2EC1D01552E39500727FF4 /* DefaultVertexShader.glsl */; };
 		9B2EC1D91552E39500727FF4 /* DiscretizeShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 9B2EC1D11552E39500727FF4 /* DiscretizeShader.glsl */; };
@@ -145,6 +146,8 @@
 		9B0584CE14B3398000CF4DFC /* SYPProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SYPProject-Prefix.pch"; sourceTree = "<group>"; };
 		9B0584CF14B3398000CF4DFC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9B0584D014B3398000CF4DFC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9B17F4861623C31E00AA9B0D /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
+		9B17F4871623C31E00AA9B0D /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
 		9B23CFF01543E867009C9AB2 /* AVCamCaptureManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVCamCaptureManager.h; sourceTree = "<group>"; };
 		9B23CFF11543E867009C9AB2 /* AVCamCaptureManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AVCamCaptureManager.mm; sourceTree = "<group>"; };
 		9B23CFF21543E867009C9AB2 /* AVCamPreviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVCamPreviewView.h; sourceTree = "<group>"; };
@@ -613,6 +616,8 @@
 				9B351DFE14C3D083002F8283 /* RRObejctCRuntime.m */,
 				9B351DEC14C3D025002F8283 /* RRLog.h */,
 				9B351DED14C3D025002F8283 /* RRLog.m */,
+				9B17F4861623C31E00AA9B0D /* UncaughtExceptionHandler.m */,
+				9B17F4871623C31E00AA9B0D /* UncaughtExceptionHandler.h */,
 			);
 			path = RRLog;
 			sourceTree = "<group>";
@@ -1022,6 +1027,7 @@
 				9BBD6E941552D3E40058EEBD /* XBFilteredImageView.m in Sources */,
 				9BBD6E951552D3E40058EEBD /* XBFilteredView.m in Sources */,
 				9BBD6E9C1552DA4E0058EEBD /* SYPTestAvCameraViewController.m in Sources */,
+				9B17F4881623C31E00AA9B0D /* UncaughtExceptionHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
