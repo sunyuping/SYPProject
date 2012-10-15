@@ -22,6 +22,9 @@
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 
 #import "UncaughtExceptionHandler.h"
+#import "DemoViewController.h"
+
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -67,25 +70,11 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    //测试科大讯飞
-   // TestKeDaViewController *mytestviewcontrol = [[TestKeDaViewController alloc] init];
-    //
-    //MyTestViewController *mytestviewcontrol = [[MyTestViewController alloc] init];
-    //测试mk网络
-    //Test_MKNetworkKit *mytestviewcontrol = [[Test_MKNetworkKit alloc] init];
-    //测试拍照
-    //RRCameraViewController *mytestviewcontrol = [[RRCameraViewController alloc] init];
-    
-   // FreemojiController *mytestviewcontrol = [[FreemojiController alloc]init];
-    
-    RichTextKitViewController *mytestviewcontrol = [[RichTextKitViewController alloc]init];
-    
-    //Test_downloadViewController *mytestviewcontrol = [[Test_downloadViewController alloc]init];
-    
-  //  SYPTestAvCameraViewController *mytestviewcontrol = [[SYPTestAvCameraViewController alloc]init];
-    
-    self.window.rootViewController = mytestviewcontrol;
-    [mytestviewcontrol release];
+    DemoViewController *demoView = [[DemoViewController alloc] init];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:demoView];
+    self.window.rootViewController = nc;
+    [nc release];
+    [demoView release];
     [self.window makeKeyAndVisible];
     return YES;
 }
