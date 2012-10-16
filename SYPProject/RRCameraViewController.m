@@ -54,15 +54,14 @@
 //        [self.view addSubview:_hideview];
 //        
 //	}	
-    
-    
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    picker.showsCameraControls = YES;
-    [picker.view addSubview:_hideview];
-    //picker.cameraOverlayView = viewCamera; 
-    [self presentModalViewController:picker animated:YES]; 
-
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        picker.showsCameraControls = YES;
+        [picker.view addSubview:_hideview];
+        //picker.cameraOverlayView = viewCamera; 
+        [self presentModalViewController:picker animated:YES]; 
+    }
 }
 - (void)viewDidUnload
 {

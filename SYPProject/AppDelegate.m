@@ -17,7 +17,7 @@
 
 #import "Test_downloadViewController.h"
 
-#import "SYPTestAvCameraViewController.h"
+//#import "SYPTestAvCameraViewController.h"
 
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 

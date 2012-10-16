@@ -10,7 +10,7 @@
 
 #import "RichTextKitViewController.h"
 #import "RRCameraViewController.h"
-
+#import "ThirdCertViewController.h"
 
 
 @interface DemoViewController ()
@@ -31,7 +31,7 @@
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (!self) return nil;
     
-	self.title = NSLocalizedString(@"Settings", @"Settings");
+	self.title = NSLocalizedString(@"Demos", @"Demos");
     
 	return self;
 }
@@ -62,9 +62,12 @@
 		}];
         
 		[section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
-			cell.textLabel.text = NSLocalizedString(@"Wallpaper", @"Wallpaper");
+			cell.textLabel.text = NSLocalizedString(@"thirdcert", @"thirdcert");
 		} whenSelected:^(NSIndexPath *indexPath) {
 			//TODO
+            ThirdCertViewController *thirdcert = [[ThirdCertViewController alloc] init];
+            [self.navigationController pushViewController:thirdcert animated:YES];
+            [thirdcert release];
 		}];
 	}];
 

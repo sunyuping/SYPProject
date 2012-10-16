@@ -18,7 +18,7 @@
 	self = [super init];
 	if(!self) return nil;
 
-	self.cellHeight = UITableViewAutomaticDimension;
+	self.cellHeight = 50;
 	self.tableViewCellSubclass = [UITableViewCell class];
 	self.cellStyle = UITableViewCellStyleDefault;
 	self.reuseIdentifier = @"DefaultCell";

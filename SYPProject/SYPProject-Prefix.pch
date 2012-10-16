@@ -16,6 +16,8 @@
 #import "RRDefines.h"
 #import "RRSingleton.h"
 #import "RRLog.h"
+#import "YPUIControls.h"
+
 
 #import "RichTextKit.h"
 
