@@ -41,7 +41,10 @@ typedef enum
 	// Apple NetworkStatus Compatible Names.
 	NotReachable     = 0,
 	ReachableViaWiFi = 2,
-	ReachableViaWWAN = 1
+	ReachableViaWWAN = 1,
+    ReachableVia3G   = 3,
+    ReachableVia2G   = 4
+    
 } NetworkStatus;
 
 @class Reachability;
@@ -83,7 +86,7 @@ typedef void (^NetworkUnreachable)(Reachability * reachability);
 -(BOOL)isConnectionOnDemand;
 // Is user intervention required?
 -(BOOL)isInterventionRequired;
-
+-(NetworkStatus)currentDetailReachabilityStatus;
 -(NetworkStatus)currentReachabilityStatus;
 -(SCNetworkReachabilityFlags)reachabilityFlags;
 -(NSString*)currentReachabilityString;

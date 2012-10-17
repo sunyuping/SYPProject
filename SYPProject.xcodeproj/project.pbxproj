@@ -1039,8 +1039,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 玉平 孙 (67BHXT46CR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 玉平 孙 (67BHXT46CR)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "/Users/sunyuping/workspase/SYPProject/SYPProject/msc/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1060,8 +1060,8 @@
 					/Users/sunyuping/workspase/SYPProject/SYPProject/msc/iFlyISR.framework,
 					/Users/sunyuping/workspase/SYPProject/SYPProject/msc/iFlyTTS.framework,
 				);
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "87277A6F-E2B0-4ED4-9889-5ABBE2809C9E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "87277A6F-E2B0-4ED4-9889-5ABBE2809C9E";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1072,7 +1072,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 玉平 孙 (67BHXT46CR)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "/Users/sunyuping/workspase/SYPProject/SYPProject/msc/**";
@@ -1087,7 +1087,7 @@
 					/Users/sunyuping/workspase/SYPProject/SYPProject/msc/iFlyTTS.framework,
 				);
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "87277A6F-E2B0-4ED4-9889-5ABBE2809C9E";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1098,8 +1098,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 玉平 孙 (67BHXT46CR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 玉平 孙 (67BHXT46CR)";
 				FRAMEWORK_SEARCH_PATHS = "/Users/sunyuping/workspase/SYPProject/SYPProject/msc/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SYPProject/SYPProject-Prefix.pch";
@@ -1114,8 +1114,8 @@
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "87277A6F-E2B0-4ED4-9889-5ABBE2809C9E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "87277A6F-E2B0-4ED4-9889-5ABBE2809C9E";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1125,7 +1125,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 玉平 孙 (67BHXT46CR)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "/Users/sunyuping/workspase/SYPProject/SYPProject/msc/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1141,7 +1141,7 @@
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "87277A6F-E2B0-4ED4-9889-5ABBE2809C9E";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

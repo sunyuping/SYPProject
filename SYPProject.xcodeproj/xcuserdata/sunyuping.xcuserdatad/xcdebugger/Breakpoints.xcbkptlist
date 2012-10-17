@@ -265,11 +265,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SYPProject/RichTextKitViewController.m"
-         timestampString = "357117683.946315"
+         timestampString = "371919231.749063"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "56"
-         endingLineNumber = "56"
+         startingLineNumber = "59"
+         endingLineNumber = "59"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -635,6 +635,19 @@
          startingLineNumber = "83"
          endingLineNumber = "83"
          landmarkName = "-handleException:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SYPProject/RichTextKitViewController.m"
+         timestampString = "371919170.80299"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "85"
+         endingLineNumber = "85"
+         landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
