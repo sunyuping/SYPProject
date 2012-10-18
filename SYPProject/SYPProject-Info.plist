@@ -10,8 +10,20 @@
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
 	<string>icon.png</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string></string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>SYPDemo.com</string>
+				<string>SYPDemo</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.renren.syp.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.SYPDemo.test</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

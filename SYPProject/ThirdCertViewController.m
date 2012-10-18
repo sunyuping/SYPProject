@@ -9,7 +9,8 @@
 #import "ThirdCertViewController.h"
 
 #import "SinaWeibo.h"
-
+#import "OpenApi.h"
+#import "QQWeiboAuthorizeView.h"
 @interface ThirdCertViewController ()
 
 @end
@@ -42,6 +43,47 @@
     
 	return self;
 }
+- (void)tencentSendWeibo {
+    
+    //Todo：请填写调用t/add发表微博接口所需要的参数值，具体请参考http://wiki.open.t.qq.com/index.php/API文档
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    OpenApi *openApi = [[OpenApi alloc] initForApi:[OpenSdkBase getAppKey] appSecret:[OpenSdkBase getAppSecret] accessToken:[ud objectForKey:kTXaccessTokenKey] accessSecret:[ud objectForKey:kTXaccessSecretKey] openid:[ud objectForKey:kTXopenidKey] oauthType:InWebView];
+    [openApi publishWeibo:@"test000222" jing:@"" wei:@"" format:@"json" clientip:@"CLIENTIP" syncflag:@"0"]; //发表微博
+}
+#pragma mark - Tencent Methods
+- (void)tencentLoginWithMicroblogAccount {
+    if (_OpenOauth == nil) {
+        _OpenOauth = [[OpenSdkOauth alloc] initAppKey:[OpenSdkBase getAppKey] appSecret:[OpenSdkBase getAppSecret]];
+        _OpenOauth.oauthType = InWebView;
+    }
+    QQWeiboAuthorizeView *authorizeView = [[QQWeiboAuthorizeView alloc] init];
+    authorizeView.delegate = self;
+    authorizeView.OpenSdkOauth =_OpenOauth;
+    [authorizeView show];
+    [authorizeView release];
+}
+#pragma mark -QQWeiboAuthorizeViewDelegate 
+
+/*
+ * 登录成功后调用，获取OpenSdkOauth各成员变量的值
+ */
+- (void) oauthDidSuccess:(NSString *)accessToken accessSecret:(NSString *)accessSecret openid:(NSString *)openid openkey:(NSString *)openkey expireIn:(NSString *)expireIn{
+    NSLog(@"登录成功后调用，获取OpenSdkOauth各成员变量的值==accessToken=%@",accessToken);
+}
+
+/*
+ * 授权失败调用，可能由于网络原因或参数值设置原因等
+ */
+- (void) oauthDidFail:(uint16_t)oauthType success:(BOOL)success netNotWork:(BOOL)netNotWork{
+    NSLog(@"授权失败调用，可能由于网络原因或参数值设置原因等");
+}
+/*
+ * webView方式，拒绝授权时调用
+ */
+- (void) refuseOauth:(NSURL *)url{
+    NSLog(@"webView方式，拒绝授权时调用");
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -56,24 +98,31 @@
 		} whenSelected:^(NSIndexPath *indexPath) {
 			//TODO
             [sinaweibo logIn];
-//            YPAlertView *alertview = [YPAlertView alertViewWith:@"sina....."
-//                                                        message:@"ddasdadasdasda\nadas\ndasd\n"
-//                                                       delegate:nil
-//                                                   cancelButton:YES];
-//            [alertview show];
+
 		}];
         
 		[section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
+            staticContentCell.cellStyle = UITableViewCellStyleValue1;
 			cell.textLabel.text = NSLocalizedString(@"qq", @"qq");
+            cell.detailTextLabel.text = @"未授权";
 			//cell.imageView.image = [UIImage imageNamed:@"Brightness"];
 		} whenSelected:^(NSIndexPath *indexPath) {
 			//TODO
             //测试拍照
+            if ([OpenSdkOauth isLoggedIn]) {
+                [self tencentSendWeibo];
+            }
+            else {
+                [self tencentLoginWithMicroblogAccount];
+            }
+
             
 		}];
         
 		[section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
+            staticContentCell.cellStyle = UITableViewCellStyleValue1;
 			cell.textLabel.text = NSLocalizedString(@"Wallpaper", @"Wallpaper");
+            cell.detailTextLabel.text = @"未授权";
 		} whenSelected:^(NSIndexPath *indexPath) {
 			//TODO
             [sinaweibo requestWithURL:@"users/show.json"

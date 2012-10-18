@@ -56,6 +56,9 @@
 		9B6C5793162D518A0049A00E /* alert-window.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C578B162D518A0049A00E /* alert-window.png */; };
 		9B6C5794162D518A0049A00E /* alert-window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C578C162D518A0049A00E /* alert-window@2x.png */; };
 		9B6C5796162D53A90049A00E /* BlockBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C5782162D50780049A00E /* BlockBackground.m */; };
+		9B797618162FC66F0073F794 /* QQWeiboAuthorizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B797617162FC66F0073F794 /* QQWeiboAuthorizeView.m */; };
+		9B79761D162FC6970073F794 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B79761B162FC6970073F794 /* close.png */; };
+		9B79761E162FC6970073F794 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B79761C162FC6970073F794 /* close@2x.png */; };
 		9B7B5D85150DF9AF00C04206 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7B5D84150DF9AF00C04206 /* AVFoundation.framework */; };
 		9B7B5D88150DFDDB00C04206 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7B5D87150DFDDB00C04206 /* CoreVideo.framework */; };
 		9B7B5D8A150DFEB200C04206 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7B5D89150DFEB200C04206 /* CoreMedia.framework */; };
@@ -279,6 +282,10 @@
 		9B6C578B162D518A0049A00E /* alert-window.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alert-window.png"; sourceTree = "<group>"; };
 		9B6C578C162D518A0049A00E /* alert-window@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alert-window@2x.png"; sourceTree = "<group>"; };
 		9B6C5795162D52220049A00E /* YPUIControls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPUIControls.h; sourceTree = "<group>"; };
+		9B797616162FC66F0073F794 /* QQWeiboAuthorizeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQWeiboAuthorizeView.h; sourceTree = "<group>"; };
+		9B797617162FC66F0073F794 /* QQWeiboAuthorizeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQWeiboAuthorizeView.m; sourceTree = "<group>"; };
+		9B79761B162FC6970073F794 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		9B79761C162FC6970073F794 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
 		9B7B5D84150DF9AF00C04206 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9B7B5D87150DFDDB00C04206 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		9B7B5D89150DFEB200C04206 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -675,6 +682,7 @@
 		9B46C50F162F9FFF009FA69D /* QQOpenSdk */ = {
 			isa = PBXGroup;
 			children = (
+				9B79761A162FC6970073F794 /* image */,
 				9B46C513162F9FFF009FA69D /* OpenApi.h */,
 				9B46C514162F9FFF009FA69D /* OpenApi.m */,
 				9B46C515162F9FFF009FA69D /* OpenSdkBase.h */,
@@ -685,6 +693,8 @@
 				9B46C51A162F9FFF009FA69D /* OpenSdkRequest.m */,
 				9B46C51B162F9FFF009FA69D /* OpenSdkResponse.h */,
 				9B46C51C162F9FFF009FA69D /* OpenSdkResponse.m */,
+				9B797616162FC66F0073F794 /* QQWeiboAuthorizeView.h */,
+				9B797617162FC66F0073F794 /* QQWeiboAuthorizeView.m */,
 			);
 			path = QQOpenSdk;
 			sourceTree = "<group>";
@@ -775,6 +785,15 @@
 				9B6C578C162D518A0049A00E /* alert-window@2x.png */,
 			);
 			path = alertImage;
+			sourceTree = "<group>";
+		};
+		9B79761A162FC6970073F794 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				9B79761B162FC6970073F794 /* close.png */,
+				9B79761C162FC6970073F794 /* close@2x.png */,
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 		9B81A5101519DE3200C62931 /* Reachability */ = {
@@ -1040,6 +1059,8 @@
 				9BF82500162EB3350013F3B0 /* SinaWeibo.bundle in Resources */,
 				9BF8251D162EC1420013F3B0 /* icon.png in Resources */,
 				9BF8251E162EC1420013F3B0 /* icon@2x.png in Resources */,
+				9B79761D162FC6970073F794 /* close.png in Resources */,
+				9B79761E162FC6970073F794 /* close@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1112,6 +1133,7 @@
 				9B46C520162F9FFF009FA69D /* OpenSdkOauth.m in Sources */,
 				9B46C521162F9FFF009FA69D /* OpenSdkRequest.m in Sources */,
 				9B46C522162F9FFF009FA69D /* OpenSdkResponse.m in Sources */,
+				9B797618162FC66F0073F794 /* QQWeiboAuthorizeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1123,8 +1145,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: 玉平 孙 (67BHXT46CR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 玉平 孙 (67BHXT46CR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "/Users/sunyuping/workspase/SYPProject/SYPProject/msc/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1144,8 +1166,8 @@
 					/Users/sunyuping/workspase/SYPProject/SYPProject/msc/iFlyISR.framework,
 					/Users/sunyuping/workspase/SYPProject/SYPProject/msc/iFlyTTS.framework,
 				);
-				PROVISIONING_PROFILE = "87277A6F-E2B0-4ED4-9889-5ABBE2809C9E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "87277A6F-E2B0-4ED4-9889-5ABBE2809C9E";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1156,7 +1178,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: 玉平 孙 (67BHXT46CR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "/Users/sunyuping/workspase/SYPProject/SYPProject/msc/**";
@@ -1171,7 +1193,7 @@
 					/Users/sunyuping/workspase/SYPProject/SYPProject/msc/iFlyTTS.framework,
 				);
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "87277A6F-E2B0-4ED4-9889-5ABBE2809C9E";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1182,34 +1204,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 玉平 孙 (67BHXT46CR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 玉平 孙 (67BHXT46CR)";
-				FRAMEWORK_SEARCH_PATHS = "/Users/sunyuping/workspase/SYPProject/SYPProject/msc/**";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SYPProject/SYPProject-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "SYPProject/SYPProject-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				LIBRARY_SEARCH_PATHS = (
-					"/Users/sunyuping/workspase/SYPProject/SYPProject/msc/iFlyISR.framework/**",
-					"/Users/sunyuping/workspase/SYPProject/SYPProject/msc/iFlyTTS.framework/**",
-					"\"$(SRCROOT)/SYPProject/RenRenLbsSDK\"/**",
-					"\"$(SRCROOT)/SYPProject/RenRenLbsSDK\"",
-				);
-				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "87277A6F-E2B0-4ED4-9889-5ABBE2809C9E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "87277A6F-E2B0-4ED4-9889-5ABBE2809C9E";
-				TARGETED_DEVICE_FAMILY = 1;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		9B0584D614B3398000CF4DFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 玉平 孙 (67BHXT46CR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "/Users/sunyuping/workspase/SYPProject/SYPProject/msc/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1225,7 +1220,34 @@
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "87277A6F-E2B0-4ED4-9889-5ABBE2809C9E";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9B0584D614B3398000CF4DFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "/Users/sunyuping/workspase/SYPProject/SYPProject/msc/**";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SYPProject/SYPProject-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "SYPProject/SYPProject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/sunyuping/workspase/SYPProject/SYPProject/msc/iFlyISR.framework/**",
+					"/Users/sunyuping/workspase/SYPProject/SYPProject/msc/iFlyTTS.framework/**",
+					"\"$(SRCROOT)/SYPProject/RenRenLbsSDK\"/**",
+					"\"$(SRCROOT)/SYPProject/RenRenLbsSDK\"",
+				);
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

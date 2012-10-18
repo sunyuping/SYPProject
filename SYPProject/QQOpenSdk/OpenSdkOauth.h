@@ -90,5 +90,7 @@ typedef enum
  */
 + (BOOL)isLoggedIn;
 //
-
+- (void)saveAuthorizeData;
 @end
+
+extern BOOL QQWeiboIsDeviceIPad();
