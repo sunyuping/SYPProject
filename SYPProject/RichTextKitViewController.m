@@ -8,6 +8,9 @@
 
 #import "RichTextKitViewController.h"
 #import <CoreText/CoreText.h>
+
+#import "Reachability.h"
+
 @interface RichTextKitViewController ()
 
 @end
@@ -74,6 +77,11 @@ static NSString *jjEmotions = @"[jj01],[jj02],[jj03],[jj04],[jj05],[jj06],[jj07]
     [self.view addSubview:test];
     [test addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchDown];
     
+    
+    Reachability *tmp = [Reachability reachabilityWithHostname:@"www.renren.com"];
+    
+    NetworkStatus a = [tmp  currentDetailReachabilityStatus];
+    NetworkStatus b = [tmp currentReachabilityStatus];
 }
 -(void)test:(UIButton*)btn{
      [self performSelector:@selector(aaaa)];
@@ -131,4 +139,7 @@ static NSString *jjEmotions = @"[jj01],[jj02],[jj03],[jj04],[jj05],[jj06],[jj07]
 - (NSDictionary *)defaultStyle{
     return nil;
 }
+
+
+
 @end

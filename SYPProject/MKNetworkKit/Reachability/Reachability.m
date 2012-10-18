@@ -439,4 +439,73 @@ static void TMReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
     });
 }
 
+
+- (NetworkStatus) currentDetailReachabilityStatus
+{
+    SCNetworkReachabilityFlags flags;
+    if (SCNetworkReachabilityGetFlags(reachabilityRef, &flags))
+    {
+        NSLog(@"Reachability Flag Status: %c%c %c%c%c%c%c%c%c %s\n",
+              (flags & kSCNetworkReachabilityFlagsIsWWAN)                                  ? 'W' : '-',
+              (flags & kSCNetworkReachabilityFlagsReachable)            ? 'R' : '-',
+              
+              (flags & kSCNetworkReachabilityFlagsTransientConnection)  ? 't' : '-',
+              (flags & kSCNetworkReachabilityFlagsConnectionRequired)   ? 'c' : '-',
+              (flags & kSCNetworkReachabilityFlagsConnectionOnTraffic)  ? 'C' : '-',
+              (flags & kSCNetworkReachabilityFlagsInterventionRequired) ? 'i' : '-',
+              (flags & kSCNetworkReachabilityFlagsConnectionOnDemand)   ? 'D' : '-',
+              (flags & kSCNetworkReachabilityFlagsIsLocalAddress)       ? 'l' : '-',
+              (flags & kSCNetworkReachabilityFlagsIsDirect)             ? 'd' : '-',
+              "my custemed :::"
+              );
+        
+        if ((flags & kSCNetworkReachabilityFlagsReachable) == 0)
+        {
+            // if target host is not reachable
+            return NotReachable;
+        }
+        
+        NetworkStatus retVal = NotReachable;
+        
+        if ((flags & kSCNetworkReachabilityFlagsConnectionRequired) == 0)
+        {
+            // if target host is reachable and no connection is required
+            //  then we'll assume (for now) that your on Wi-Fi
+            retVal = ReachableViaWiFi;
+        }
+        
+        if ((((flags & kSCNetworkReachabilityFlagsConnectionOnDemand ) != 0) ||
+             (flags & kSCNetworkReachabilityFlagsConnectionOnTraffic) != 0))
+        {
+            // ... and the connection is on-demand (or on-traffic) if the
+            //     calling application is using the CFSocketStream or higher APIs
+            
+            if ((flags & kSCNetworkReachabilityFlagsInterventionRequired) == 0)
+            {
+                // ... and no [user] intervention is needed
+                retVal = ReachableViaWiFi;
+            }
+        }
+        
+        if ((flags & kSCNetworkReachabilityFlagsIsWWAN) == kSCNetworkReachabilityFlagsIsWWAN)
+        {
+            retVal = ReachableVia3G;
+            if((flags & kSCNetworkReachabilityFlagsReachable) == kSCNetworkReachabilityFlagsReachable)
+            {
+                if((flags & kSCNetworkReachabilityFlagsTransientConnection) == kSCNetworkReachabilityFlagsTransientConnection)
+                {
+                    if((flags & kSCNetworkReachabilityFlagsConnectionRequired) == kSCNetworkReachabilityFlagsConnectionRequired)
+                    {
+                        retVal = ReachableVia2G;
+                    }
+                }
+            }
+        }
+        return retVal;
+    }
+    return NotReachable;
+}
+
+
+
 @end
