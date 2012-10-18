@@ -25,6 +25,11 @@
 		9B351DF814C3D026002F8283 /* RRUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B351DF214C3D026002F8283 /* RRUtility.m */; };
 		9B3D79EA14E6C80100FA5474 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B3D79E914E6C80100FA5474 /* AddressBook.framework */; };
 		9B3F6E5614B57DEF0001E20D /* BlueToothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3F6E5514B57DEF0001E20D /* BlueToothViewController.m */; };
+		9B46C51E162F9FFF009FA69D /* OpenApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B46C514162F9FFF009FA69D /* OpenApi.m */; };
+		9B46C51F162F9FFF009FA69D /* OpenSdkBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B46C516162F9FFF009FA69D /* OpenSdkBase.m */; };
+		9B46C520162F9FFF009FA69D /* OpenSdkOauth.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B46C518162F9FFF009FA69D /* OpenSdkOauth.m */; };
+		9B46C521162F9FFF009FA69D /* OpenSdkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B46C51A162F9FFF009FA69D /* OpenSdkRequest.m */; };
+		9B46C522162F9FFF009FA69D /* OpenSdkResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B46C51C162F9FFF009FA69D /* OpenSdkResponse.m */; };
 		9B5D1D351509CE3C00FEF1A9 /* RRCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5D1D341509CE3C00FEF1A9 /* RRCameraViewController.m */; };
 		9B60A9BB14D9012400B5670C /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B60A9AA14D9012400B5670C /* NSData+Base64.m */; };
 		9B60A9BC14D9012400B5670C /* NSDate+RFC1123.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B60A9AC14D9012400B5670C /* NSDate+RFC1123.m */; };
@@ -220,6 +225,16 @@
 		9B3D79E914E6C80100FA5474 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		9B3F6E5414B57DEF0001E20D /* BlueToothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueToothViewController.h; sourceTree = "<group>"; };
 		9B3F6E5514B57DEF0001E20D /* BlueToothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueToothViewController.m; sourceTree = "<group>"; };
+		9B46C513162F9FFF009FA69D /* OpenApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenApi.h; sourceTree = "<group>"; };
+		9B46C514162F9FFF009FA69D /* OpenApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenApi.m; sourceTree = "<group>"; };
+		9B46C515162F9FFF009FA69D /* OpenSdkBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenSdkBase.h; sourceTree = "<group>"; };
+		9B46C516162F9FFF009FA69D /* OpenSdkBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenSdkBase.m; sourceTree = "<group>"; };
+		9B46C517162F9FFF009FA69D /* OpenSdkOauth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenSdkOauth.h; sourceTree = "<group>"; };
+		9B46C518162F9FFF009FA69D /* OpenSdkOauth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenSdkOauth.m; sourceTree = "<group>"; };
+		9B46C519162F9FFF009FA69D /* OpenSdkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenSdkRequest.h; sourceTree = "<group>"; };
+		9B46C51A162F9FFF009FA69D /* OpenSdkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenSdkRequest.m; sourceTree = "<group>"; };
+		9B46C51B162F9FFF009FA69D /* OpenSdkResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenSdkResponse.h; sourceTree = "<group>"; };
+		9B46C51C162F9FFF009FA69D /* OpenSdkResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenSdkResponse.m; sourceTree = "<group>"; };
 		9B5D1D331509CE3C00FEF1A9 /* RRCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRCameraViewController.h; sourceTree = "<group>"; };
 		9B5D1D341509CE3C00FEF1A9 /* RRCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRCameraViewController.m; sourceTree = "<group>"; };
 		9B60A9A914D9012400B5670C /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
@@ -657,6 +672,23 @@
 			path = RRUtility;
 			sourceTree = "<group>";
 		};
+		9B46C50F162F9FFF009FA69D /* QQOpenSdk */ = {
+			isa = PBXGroup;
+			children = (
+				9B46C513162F9FFF009FA69D /* OpenApi.h */,
+				9B46C514162F9FFF009FA69D /* OpenApi.m */,
+				9B46C515162F9FFF009FA69D /* OpenSdkBase.h */,
+				9B46C516162F9FFF009FA69D /* OpenSdkBase.m */,
+				9B46C517162F9FFF009FA69D /* OpenSdkOauth.h */,
+				9B46C518162F9FFF009FA69D /* OpenSdkOauth.m */,
+				9B46C519162F9FFF009FA69D /* OpenSdkRequest.h */,
+				9B46C51A162F9FFF009FA69D /* OpenSdkRequest.m */,
+				9B46C51B162F9FFF009FA69D /* OpenSdkResponse.h */,
+				9B46C51C162F9FFF009FA69D /* OpenSdkResponse.m */,
+			);
+			path = QQOpenSdk;
+			sourceTree = "<group>";
+		};
 		9B60A9A714D9012300B5670C /* MKNetworkKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -707,6 +739,7 @@
 		9B6C5763162D097D0049A00E /* ThirdPartyCertification */ = {
 			isa = PBXGroup;
 			children = (
+				9B46C50F162F9FFF009FA69D /* QQOpenSdk */,
 				9BF82504162EB33C0013F3B0 /* JSONKit */,
 				9BF824F7162EB3350013F3B0 /* SinaWeibo */,
 				9B6C5765162D09A40049A00E /* ThirdCertViewController.h */,
@@ -1074,6 +1107,11 @@
 				9BF82502162EB3350013F3B0 /* SinaWeiboAuthorizeView.m in Sources */,
 				9BF82503162EB3350013F3B0 /* SinaWeiboRequest.m in Sources */,
 				9BF82507162EB33C0013F3B0 /* JSONKit.m in Sources */,
+				9B46C51E162F9FFF009FA69D /* OpenApi.m in Sources */,
+				9B46C51F162F9FFF009FA69D /* OpenSdkBase.m in Sources */,
+				9B46C520162F9FFF009FA69D /* OpenSdkOauth.m in Sources */,
+				9B46C521162F9FFF009FA69D /* OpenSdkRequest.m in Sources */,
+				9B46C522162F9FFF009FA69D /* OpenSdkResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

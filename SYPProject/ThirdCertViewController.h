@@ -27,6 +27,11 @@
 #error
 #endif
 
+#define kQQAppKey             @"801254824"
+#define kQQAppSecret          @"a8215b871ee74d5f6e3265a94f75a2e9"
+#define kQQAppRedirectURI     @"http://SYPDemo.com"
+
+
 
 @interface ThirdCertViewController : JMStaticContentTableViewController<SinaWeiboDelegate, SinaWeiboRequestDelegate>{
     SinaWeibo *sinaweibo;
