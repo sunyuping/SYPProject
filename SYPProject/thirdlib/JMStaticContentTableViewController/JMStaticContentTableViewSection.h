@@ -22,5 +22,5 @@
 - (void) removeAllCells;
 - (void) removeCellAtIndex:(NSUInteger)rowIndex;
 - (void) removeCellAtIndex:(NSUInteger)rowIndex animated:(BOOL)animated;
-
+-(JMStaticContentTableViewCell*)getCellAtIndex;
 @end
