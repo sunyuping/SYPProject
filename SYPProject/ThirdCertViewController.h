@@ -11,9 +11,9 @@
 #import "SinaWeibo.h"
 #import "SinaWeiboRequest.h"
 
-#define kSinaAppKey             @"633273606"
-#define kSinaAppSecret          @"f0e1f37d225c927af87cdbf7c595fe28"
-#define kSinaAppRedirectURI     @"http://SYPDemo.com://"
+#define kSinaAppKey             @"1139245895"
+#define kSinaAppSecret          @"5562de1cccec66c428454998552a3516"
+#define kSinaAppRedirectURI     @"oauth://SYPDemo.com"
 
 #ifndef kSinaAppKey
 #error

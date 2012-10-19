@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "RRException.h"
+#import "WXApi.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate,RRExceptionProtocol>//
+@interface AppDelegate : UIResponder <UIApplicationDelegate,RRExceptionProtocol,WXApiDelegate>//
 
 @property (strong, nonatomic) UIWindow *window;
-
+- (void) RespImageContent;
 @end

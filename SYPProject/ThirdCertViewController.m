@@ -11,6 +11,7 @@
 #import "SinaWeibo.h"
 #import "OpenApi.h"
 #import "QQWeiboAuthorizeView.h"
+#import "AppDelegate.h"
 @interface ThirdCertViewController ()
 
 @end
@@ -125,11 +126,14 @@
             cell.detailTextLabel.text = @"未授权";
 		} whenSelected:^(NSIndexPath *indexPath) {
 			//TODO
-            [sinaweibo requestWithURL:@"users/show.json"
-                               params:[NSMutableDictionary dictionaryWithObject:sinaweibo.userID forKey:@"uid"]
-                           httpMethod:@"GET"
-                             delegate:self];
-		}];
+//            [sinaweibo requestWithURL:@"users/show.json"
+//                               params:[NSMutableDictionary dictionaryWithObject:sinaweibo.userID forKey:@"uid"]
+//                           httpMethod:@"GET"
+//                             delegate:self];
+		
+            AppDelegate* delgate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+            [delgate RespImageContent];
+        }];
 	}];
     
     

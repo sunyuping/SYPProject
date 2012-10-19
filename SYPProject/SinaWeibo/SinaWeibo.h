@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SinaWeiboAuthorizeView.h"
 #import "SinaWeiboRequest.h"
+#define callback_uri @"SYPDemo"
 
 @protocol SinaWeiboDelegate;
 

@@ -24,7 +24,6 @@
 #import "UncaughtExceptionHandler.h"
 #import "DemoViewController.h"
 
-
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -43,6 +42,8 @@
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //注册微信
+    [WXApi registerApp:@"wx0f2670f1b023cc77"];
     //获取当前运营商信息。需要4。0以上
     CTTelephonyNetworkInfo *info = [[CTTelephonyNetworkInfo alloc] init];
     CTCarrier *carrier = info.subscriberCellularProvider;
@@ -96,14 +97,17 @@
     }    
     return NO;
 }
-//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
-//   // return [[RMConnectCenter sharedCenter] handleOpenURL:url];
-//}
-//
-//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-//    return [[RMConnectCenter sharedCenter] handleOpenURL:url];
-//}
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+   // return [[RMConnectCenter sharedCenter] handleOpenURL:url];
+    [WXApi handleOpenURL:url delegate:self];
+    return YES;
+}
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+  // return [[RMConnectCenter sharedCenter] handleOpenURL:url];
+    [WXApi handleOpenURL:url delegate:self];
+    return YES;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -130,6 +134,71 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+//微信的实现和微信终端交互的具体请求与回应
+
+
+- (void) onShowMediaMessage:(WXMediaMessage *) msg
+{
+    //显示微信传过来的内容
+    WXAppExtendObject *obj = msg.mediaObject;
+    
+    NSString *strTitle = [NSString stringWithFormat:@"消息来自微信"];
+    NSString *strMsg = [NSString stringWithFormat:@"标题：%@ \n内容：%@ \n附带信息：%@ \n缩略图:%u bytes\n\n", msg.title, msg.description, obj.extInfo, msg.thumbData.length];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:strTitle message:strMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+    [alert release];
+}
+- (void) RespImageContent
+{
+    WXMediaMessage *message = [WXMediaMessage message];
+    [message setThumbImage:[UIImage imageNamed:@"icon"]];
+    WXImageObject *ext = [WXImageObject object];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"icon" ofType:@"png"];
+    ext.imageData = [NSData dataWithContentsOfFile:filePath] ;
+    message.mediaObject = ext;
+    
+    GetMessageFromWXResp* resp = [[[GetMessageFromWXResp alloc] init] autorelease];
+    resp.message = message;
+    resp.bText = NO;
+    
+    [WXApi sendResp:resp];
+}
+-(void) onReq:(BaseReq*)req
+{
+    if([req isKindOfClass:[GetMessageFromWXReq class]])
+    {
+        [self RespImageContent];
+    }
+    else if([req isKindOfClass:[ShowMessageFromWXReq class]])
+    {
+        ShowMessageFromWXReq* temp = (ShowMessageFromWXReq*)req;
+        [self onShowMediaMessage:temp.message];
+    }
+    
+}
+
+-(void) onResp:(BaseResp*)resp
+{
+    if([resp isKindOfClass:[SendMessageToWXResp class]])
+    {
+        NSString *strTitle = [NSString stringWithFormat:@"发送结果"];
+        NSString *strMsg = [NSString stringWithFormat:@"发送媒体消息结果:%d", resp.errCode];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:strTitle message:strMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        [alert release];
+    }
+    else if([resp isKindOfClass:[SendAuthResp class]])
+    {
+        NSString *strTitle = [NSString stringWithFormat:@"Auth结果"];
+        NSString *strMsg = [NSString stringWithFormat:@"Auth结果:%d", resp.errCode];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:strTitle message:strMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        [alert release];
+    }
 }
 
 @end

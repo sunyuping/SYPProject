@@ -12,6 +12,7 @@
 		9B0584C514B3398000CF4DFC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0584C414B3398000CF4DFC /* CoreGraphics.framework */; };
 		9B0584CD14B3398000CF4DFC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0584CC14B3398000CF4DFC /* main.m */; };
 		9B0584D114B3398000CF4DFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0584D014B3398000CF4DFC /* AppDelegate.m */; };
+		9B0FE835163123E900AC2554 /* libWeChatSDK_armv7_armv7s.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0FE831163123E900AC2554 /* libWeChatSDK_armv7_armv7s.a */; };
 		9B117BE8162BD7C50000AEF3 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B117BE7162BD7C50000AEF3 /* DemoViewController.m */; };
 		9B117C09162BF0720000AEF3 /* JMStaticContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B117C02162BF0720000AEF3 /* JMStaticContentTableViewCell.m */; };
 		9B117C0A162BF0720000AEF3 /* JMStaticContentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B117C04162BF0720000AEF3 /* JMStaticContentTableViewController.m */; };
@@ -162,6 +163,9 @@
 		9B0584CE14B3398000CF4DFC /* SYPProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SYPProject-Prefix.pch"; sourceTree = "<group>"; };
 		9B0584CF14B3398000CF4DFC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9B0584D014B3398000CF4DFC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9B0FE831163123E900AC2554 /* libWeChatSDK_armv7_armv7s.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK_armv7_armv7s.a; sourceTree = "<group>"; };
+		9B0FE832163123E900AC2554 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		9B0FE833163123E900AC2554 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		9B117BE6162BD7C50000AEF3 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		9B117BE7162BD7C50000AEF3 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		9B117C00162BF0720000AEF3 /* JMStaticContentTableViewBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMStaticContentTableViewBlocks.h; sourceTree = "<group>"; };
@@ -441,6 +445,7 @@
 				9B0584C114B3398000CF4DFC /* UIKit.framework in Frameworks */,
 				9B0584C314B3398000CF4DFC /* Foundation.framework in Frameworks */,
 				9B0584C514B3398000CF4DFC /* CoreGraphics.framework in Frameworks */,
+				9B0FE835163123E900AC2554 /* libWeChatSDK_armv7_armv7s.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +621,16 @@
 			name = SystemExpansion;
 			sourceTree = "<group>";
 		};
+		9B0FE82F163123E900AC2554 /* SDKExport */ = {
+			isa = PBXGroup;
+			children = (
+				9B0FE831163123E900AC2554 /* libWeChatSDK_armv7_armv7s.a */,
+				9B0FE832163123E900AC2554 /* WXApi.h */,
+				9B0FE833163123E900AC2554 /* WXApiObject.h */,
+			);
+			path = SDKExport;
+			sourceTree = "<group>";
+		};
 		9B117BFE162BF0720000AEF3 /* thirdlib */ = {
 			isa = PBXGroup;
 			children = (
@@ -758,6 +773,7 @@
 		9B6C5763162D097D0049A00E /* ThirdPartyCertification */ = {
 			isa = PBXGroup;
 			children = (
+				9B0FE82F163123E900AC2554 /* SDKExport */,
 				9B46C50F162F9FFF009FA69D /* QQOpenSdk */,
 				9BF82504162EB33C0013F3B0 /* JSONKit */,
 				9BF824F7162EB3350013F3B0 /* SinaWeibo */,
@@ -1229,6 +1245,7 @@
 					"/Users/sunyuping/workspase/SYPProject/SYPProject/msc/iFlyTTS.framework/**",
 					"\"$(SRCROOT)/SYPProject/RenRenLbsSDK\"/**",
 					"\"$(SRCROOT)/SYPProject/RenRenLbsSDK\"",
+					"\"$(SRCROOT)/SYPProject/SDKExport\"",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1256,6 +1273,7 @@
 					"/Users/sunyuping/workspase/SYPProject/SYPProject/msc/iFlyTTS.framework/**",
 					"\"$(SRCROOT)/SYPProject/RenRenLbsSDK\"/**",
 					"\"$(SRCROOT)/SYPProject/RenRenLbsSDK\"",
+					"\"$(SRCROOT)/SYPProject/SDKExport\"",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
