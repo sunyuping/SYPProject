@@ -63,6 +63,7 @@
 		9B7B5D85150DF9AF00C04206 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7B5D84150DF9AF00C04206 /* AVFoundation.framework */; };
 		9B7B5D88150DFDDB00C04206 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7B5D87150DFDDB00C04206 /* CoreVideo.framework */; };
 		9B7B5D8A150DFEB200C04206 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7B5D89150DFEB200C04206 /* CoreMedia.framework */; };
+		9B7E109D1631488D003CE872 /* YPWeiXin.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E109C1631488D003CE872 /* YPWeiXin.m */; };
 		9B81A5131519DE3200C62931 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B81A5121519DE3200C62931 /* Reachability.m */; };
 		9B81A59E1519F37A00C62931 /* login_L.html in Resources */ = {isa = PBXBuildFile; fileRef = 9B81A56F1519F37A00C62931 /* login_L.html */; };
 		9B81A59F1519F37A00C62931 /* login_P.html in Resources */ = {isa = PBXBuildFile; fileRef = 9B81A5701519F37A00C62931 /* login_P.html */; };
@@ -296,6 +297,8 @@
 		9B7B5D84150DF9AF00C04206 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9B7B5D87150DFDDB00C04206 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		9B7B5D89150DFEB200C04206 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		9B7E109B1631488D003CE872 /* YPWeiXin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPWeiXin.h; sourceTree = "<group>"; };
+		9B7E109C1631488D003CE872 /* YPWeiXin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPWeiXin.m; sourceTree = "<group>"; };
 		9B81A5111519DE3200C62931 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		9B81A5121519DE3200C62931 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		9B81A56F1519F37A00C62931 /* login_L.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = login_L.html; sourceTree = "<group>"; };
@@ -627,6 +630,8 @@
 				9B0FE831163123E900AC2554 /* libWeChatSDK_armv7_armv7s.a */,
 				9B0FE832163123E900AC2554 /* WXApi.h */,
 				9B0FE833163123E900AC2554 /* WXApiObject.h */,
+				9B7E109B1631488D003CE872 /* YPWeiXin.h */,
+				9B7E109C1631488D003CE872 /* YPWeiXin.m */,
 			);
 			path = SDKExport;
 			sourceTree = "<group>";
@@ -1162,6 +1167,7 @@
 				9B46C521162F9FFF009FA69D /* OpenSdkRequest.m in Sources */,
 				9B46C522162F9FFF009FA69D /* OpenSdkResponse.m in Sources */,
 				9B797618162FC66F0073F794 /* QQWeiboAuthorizeView.m in Sources */,
+				9B7E109D1631488D003CE872 /* YPWeiXin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
