@@ -11,7 +11,7 @@
 #import "RichTextKitViewController.h"
 #import "RRCameraViewController.h"
 #import "ThirdCertViewController.h"
-
+#import "PuzzleViewController.h"
 
 @interface DemoViewController ()
 
@@ -69,6 +69,15 @@
             [self.navigationController pushViewController:thirdcert animated:YES];
             [thirdcert release];
 		}];
+        
+//        [section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
+//			cell.textLabel.text = NSLocalizedString(@"拼图", @"拼图");
+//		} whenSelected:^(NSIndexPath *indexPath) {
+//			//TODO
+//            PuzzleViewController *puzzle = [[PuzzleViewController alloc] init];
+//            [self.navigationController pushViewController:puzzle animated:YES];
+//            [puzzle release];
+//		}];
 	}];
 
     

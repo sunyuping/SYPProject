@@ -11,7 +11,6 @@
 
 #import "Reachability.h"
 
-#import "SHSShareViewController.h"
 @interface RichTextKitViewController ()
 
 @end
@@ -86,24 +85,7 @@ static NSString *jjEmotions = @"[jj01],[jj02],[jj03],[jj04],[jj05],[jj06],[jj07]
 }
 -(void)test:(UIButton*)btn{
     // [self performSelector:@selector(aaaa)];
-    
-    SHSShareViewController *shareController=[[SHSShareViewController alloc] initWithRootViewController:self];
-    shareController.shareType=ShareTypeText;
-    shareController.sharedtitle=@"google";
-    shareController.sharedText=@"hahaha";
-    shareController.sharedURL=@"http://www.google.com";
-    shareController.sharedImageURL=@"http://a4.att.hudong.com/74/08/01300000831741129317080840244.jpg";
-    shareController.sharedImage=[UIImage imageNamed:@"bglogo"];
-   // [textField resignFirstResponder];
-    shareController.sharedText=@"test123";
-    
-    shareController.shareType=ShareTypeTextAndImage;
-    
-    if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone)
-        [shareController showShareView];
-    else
-        [shareController showShareViewFromRect:CGRectMake(190, 900, 1, 1)];
-    
+
 }
 - (void)viewDidUnload
 {
