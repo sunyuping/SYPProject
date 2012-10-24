@@ -33,6 +33,10 @@
             sinaweibo.expirationDate = [sinaweiboInfo objectForKey:@"ExpirationDateKey"];
             sinaweibo.userID = [sinaweiboInfo objectForKey:@"UserIDKey"];
         }
+        
+        if (_OpenOauth == nil) {
+            _OpenOauth = [[OpenSdkOauth alloc] initAppKey:[OpenSdkBase getAppKey] appSecret:[OpenSdkBase getAppSecret]];
+        }
     }
     return self;
 }
@@ -46,18 +50,30 @@
 }
 - (void)tencentSendWeibo {
     
-    //Todo：请填写调用t/add发表微博接口所需要的参数值，具体请参考http://wiki.open.t.qq.com/index.php/API文档
+    UIImage *image = [UIImage imageNamed:@"icon"];
+    NSString *filePath = [NSTemporaryDirectory() stringByAppendingFormat:@"tmp.png"];
+    NSLog(@"filename is %@", filePath);
     
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    OpenApi *openApi = [[OpenApi alloc] initForApi:[OpenSdkBase getAppKey] appSecret:[OpenSdkBase getAppSecret] accessToken:[ud objectForKey:kTXaccessTokenKey] accessSecret:[ud objectForKey:kTXaccessSecretKey] openid:[ud objectForKey:kTXopenidKey] oauthType:InWebView];
-    [openApi publishWeibo:@"test000222" jing:@"" wei:@"" format:@"json" clientip:@"CLIENTIP" syncflag:@"0"]; //发表微博
+    [UIImageJPEGRepresentation(image, 0) writeToFile:filePath atomically:YES];
+    
+    NSData *imageData = [NSData dataWithContentsOfFile:filePath];
+    NSLog(@"imageData size in picker:%d", [imageData length]);
+    
+    
+    if (_OpenApi == nil) {
+        _OpenApi = [[OpenApi alloc] initForApi:_OpenOauth.appKey appSecret:_OpenOauth.appSecret accessToken:_OpenOauth.accessToken accessSecret:_OpenOauth.accessSecret openid:_OpenOauth.openid oauthType:_OpenOauth.oauthType];
+    }
+
+    //Todo：请填写调用t/add_pic发表带图片微博接口所需的参数值，具体请参考http://wiki.open.t.qq.com/index.php/API文档
+    NSString *weiboContent = @"测试发布";  //Todo：微博内容
+    //发表带图片微博
+    [_OpenApi publishWeiboWithImage:filePath weiboContent:weiboContent jing:@"" wei:@"" format:@"xml" clientip:@"CLIENTIP" syncflag:@"1"];
+    
+    
 }
 #pragma mark - Tencent Methods
 - (void)tencentLoginWithMicroblogAccount {
-    if (_OpenOauth == nil) {
-        _OpenOauth = [[OpenSdkOauth alloc] initAppKey:[OpenSdkBase getAppKey] appSecret:[OpenSdkBase getAppSecret]];
-        _OpenOauth.oauthType = InWebView;
-    }
+
     QQWeiboAuthorizeView *authorizeView = [[QQWeiboAuthorizeView alloc] init];
     authorizeView.delegate = self;
     authorizeView.OpenSdkOauth =_OpenOauth;
@@ -71,6 +87,7 @@
  */
 - (void) oauthDidSuccess:(NSString *)accessToken accessSecret:(NSString *)accessSecret openid:(NSString *)openid openkey:(NSString *)openkey expireIn:(NSString *)expireIn{
     NSLog(@"登录成功后调用，获取OpenSdkOauth各成员变量的值==accessToken=%@",accessToken);
+    [self.tableView reloadData];
 }
 
 /*
@@ -94,18 +111,35 @@
             staticContentCell.cellStyle = UITableViewCellStyleValue1;
 			staticContentCell.reuseIdentifier = @"DetailTextCell";
 			cell.textLabel.text = NSLocalizedString(@"sina", @"sina");
-            cell.detailTextLabel.text = @"未授权";
+            if ([sinaweibo isAuthValid]) {
+                cell.detailTextLabel.text = @"已登陆";
+            }else{
+                cell.detailTextLabel.text = @"未授权";
+            }
 			//cell.imageView.image = [UIImage imageNamed:@"Sounds"];
 		} whenSelected:^(NSIndexPath *indexPath) {
 			//TODO
-            [sinaweibo logIn];
-
+            if ([sinaweibo isAuthValid]) {
+                [sinaweibo requestWithURL:@"statuses/upload.json"
+                                   params:[NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                           @"demotest", @"status",
+                                           [UIImage imageNamed:@"icon"], @"pic", nil]
+                               httpMethod:@"POST"
+                                 delegate:self];
+            }else{
+                [sinaweibo logIn];
+            }
 		}];
         
 		[section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
             staticContentCell.cellStyle = UITableViewCellStyleValue1;
 			cell.textLabel.text = NSLocalizedString(@"qq", @"qq");
-            cell.detailTextLabel.text = @"未授权";
+            if ([OpenSdkOauth isLoggedIn]) {
+                cell.detailTextLabel.text = @"已登陆";
+            }else{
+                cell.detailTextLabel.text = @"未授权";
+            }
+            
 			//cell.imageView.image = [UIImage imageNamed:@"Brightness"];
 		} whenSelected:^(NSIndexPath *indexPath) {
 			//TODO
@@ -158,8 +192,10 @@
 
 - (void)sinaweiboDidLogIn:(SinaWeibo *)sinaweibo
 {
-    NSLog(@"sinaweiboDidLogIn userID = %@ accesstoken = %@ expirationDate = %@ refresh_token = %@", sinaweibo.userID, sinaweibo.accessToken, sinaweibo.expirationDate,sinaweibo.refreshToken);
+ //   NSLog(@"sinaweiboDidLogIn userID = %@ accesstoken = %@ expirationDate = %@ refresh_token = %@", sinaweibo.userID, sinaweibo.accessToken, sinaweibo.expirationDate,sinaweibo.refreshToken);
     [self storeAuthData];
+    
+    [self.tableView reloadData];
 }
 
 - (void)sinaweiboDidLogOut:(SinaWeibo *)sinaweibo
@@ -183,7 +219,12 @@
     NSLog(@"sinaweiboAccessTokenInvalidOrExpired %@", error);
 }
 #pragma mark - SinaWeiboRequest Delegate
-
+- (void)request:(SinaWeiboRequest *)request didReceiveResponse:(NSURLResponse *)response{
+     NSLog(@"Post status didReceiveResponse : %@", response);
+}
+- (void)request:(SinaWeiboRequest *)request didReceiveRawData:(NSData *)data{
+     NSLog(@"Post status didReceiveRawData : %@", data);
+}
 - (void)request:(SinaWeiboRequest *)request didFailWithError:(NSError *)error
 {
     if ([request.url hasSuffix:@"users/show.json"])
@@ -233,6 +274,17 @@
     }
 }
 
+
+- (void)shareText:(NSString *)text andImage:(UIImage *)image;
+{
+    // post image status
+    [sinaweibo requestWithURL:@"statuses/upload.json"
+                       params:[NSMutableDictionary dictionaryWithObjectsAndKeys:
+                               @"demotest", @"status",
+                               [UIImage imageNamed:@"icon"], @"pic", nil]
+                   httpMethod:@"POST"
+                     delegate:self];
+}
 
 
 @end

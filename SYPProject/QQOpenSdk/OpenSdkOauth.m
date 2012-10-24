@@ -42,6 +42,14 @@ static NSString *authPrefix = @"authorize";
         _appKey = [appKey copy];
 		_appSecret = [appSecret copy];
         _redirectURI = [[NSString alloc] initWithString:[OpenSdkBase getRedirectUri]];
+        
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        if (ud) {
+            _accessToken = [ud objectForKey:kTXaccessTokenKey];
+            _accessSecret = [ud objectForKey:kTXaccessSecretKey];
+            _openid =[ud objectForKey:kTXopenidKey];
+        }
+        _oauthType = InWebView;
 	}
 	return self;
 }

@@ -13,7 +13,7 @@
 
 #define kSinaAppKey             @"1139245895"
 #define kSinaAppSecret          @"5562de1cccec66c428454998552a3516"
-#define kSinaAppRedirectURI     @"http://SYPDemo.com"
+#define kSinaAppRedirectURI     @"http://sypdemo.com"
 
 #ifndef kSinaAppKey
 #error
@@ -34,10 +34,11 @@
 //腾讯微博
 #import "OpenSdkOauth.h"
 #import "QQWeiboAuthorizeView.h"
-
+#import "OpenApi.h"
 @interface ThirdCertViewController : JMStaticContentTableViewController<SinaWeiboDelegate, SinaWeiboRequestDelegate,QQWeiboAuthorizeViewDelegate>{
     SinaWeibo *sinaweibo;
     OpenSdkOauth         *_OpenOauth;
+    OpenApi              *_OpenApi;
 }
 @property (readonly, nonatomic) SinaWeibo *sinaweibo;
 @property (readonly, nonatomic) OpenSdkOauth *OpenOauth;

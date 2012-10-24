@@ -34,5 +34,4 @@
 	   whenSelected:(JMStaticContentTableViewCellWhenSelectedBlock)whenSelectedBlock
 		atIndexPath:(NSIndexPath *)indexPath 
 		   animated:(BOOL)animated;
-
 @end
