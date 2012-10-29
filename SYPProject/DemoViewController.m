@@ -12,7 +12,7 @@
 #import "RRCameraViewController.h"
 #import "ThirdCertViewController.h"
 #import "PuzzleViewController.h"
-
+#import "GitDemoViewController.h"
 @interface DemoViewController ()
 
 @end
@@ -70,14 +70,23 @@
             [thirdcert release];
 		}];
         
-        [section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
-			cell.textLabel.text = NSLocalizedString(@"拼图", @"拼图");
-		} whenSelected:^(NSIndexPath *indexPath) {
-			//TODO
-            PuzzleViewController *puzzle = [[PuzzleViewController alloc] init];
-            [self.navigationController pushViewController:puzzle animated:YES];
-            [puzzle release];
-		}];
+//        [section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
+//			cell.textLabel.text = NSLocalizedString(@"拼图", @"拼图");
+//		} whenSelected:^(NSIndexPath *indexPath) {
+//			//TODO
+//            PuzzleViewController *puzzle = [[PuzzleViewController alloc] init];
+//            [self.navigationController pushViewController:puzzle animated:YES];
+//            [puzzle release];
+//		}];
+//        
+//        [section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
+//			cell.textLabel.text = NSLocalizedString(@"制作gif", @"制作gif");
+//		} whenSelected:^(NSIndexPath *indexPath) {
+//			//TODO
+//            GitDemoViewController *puzzle = [[GitDemoViewController alloc] init];
+//            [self.navigationController pushViewController:puzzle animated:YES];
+//            [puzzle release];
+//		}];
 	}];
 
     
