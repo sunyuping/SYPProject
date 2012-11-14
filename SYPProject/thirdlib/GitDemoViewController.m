@@ -116,7 +116,9 @@
 		[imageCell autorelease];
 #endif
 	}
-	imageCell.imageView.image = [UIImage imageWithCGImage:((ALAsset*)[self.images objectAtIndex:indexPath.row]).thumbnail];//[UIImage imageWithContentsOfFile:[[self.images objectAtIndex:indexPath.row] valueForProperty:@"URLs"]];//[[self.images objectAtIndex:indexPath.row] image]
+    ALAsset *tmp = (ALAsset*)[self.images objectAtIndex:indexPath.row];
+
+	imageCell.imageView.image =  [UIImage imageWithCGImage:[tmp.defaultRepresentation fullScreenImage]];//[[self.images objectAtIndex:indexPath.row] image]
 	imageCell.imageView.contentMode = UIViewContentModeScaleAspectFit;
 	imageCell.textLabel.text = [NSString stringWithFormat:@"image%d",indexPath.row];
 	return imageCell;
@@ -207,7 +209,7 @@
     NSLog(@"Path: %@", fileOutput);
     MFMailComposeViewController * compose = [[MFMailComposeViewController alloc] init];
     [compose setSubject:@"Gif Image"];
-    [compose setMessageBody:@"I have kindly attached a GIF image to this E-mail. I made this GIF using ANGif, an open source Objective-C library for exporting animated GIFs." isHTML:NO];
+    [compose setMessageBody:@"生成gif测试." isHTML:NO];
     [compose addAttachmentData:attachmentData mimeType:@"image/gif" fileName:@"image.gif"];
     [compose setMailComposeDelegate:self];
     [self performSelector:@selector(showViewController:) withObject:compose afterDelay:1];

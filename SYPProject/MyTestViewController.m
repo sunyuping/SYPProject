@@ -63,7 +63,7 @@
 	[label1 addCustomLink:[NSURL URLWithString:@"http://www.renren.com"] inRange:[txt rangeOfString:@"点击事件"]];
     
 	// Use the "Justified" alignment
-	label1.textAlignment = UITextAlignmentJustify;
+	//label1.textAlignment = UITextAlignmentJustify;
 	// "Hello World!" will be displayed in the label, justified, "Hello" in red and " World!" in gray.	
     [self.view addSubview:label1];
     [label1 release];
@@ -155,9 +155,12 @@
 - (void)captureOutput:(AVCaptureOutput *)captureOutput   
 didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer   
        fromConnection:(AVCaptureConnection *)connection  
-{   
+{
+    NSLog(@"syp==didOutputSampleBuffer");
     // Create a UIImage from the sample buffer data  
     if (isgetpic) {
+        UIImage *image = [self imageFromSampleBuffer:sampleBuffer];
+        mData = UIImageJPEGRepresentation(image, 0.5);//这里的mData是NSData对象，后面的0.5代表生成的图片质量
 //        if(UIGraphicsBeginImageContextWithOptions != NULL)
 //        {
 //            UIGraphicsBeginImageContextWithOptions(preLayer.frame.size, NO, 0.0);
@@ -341,4 +344,6 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
         }
     }];
 }
+
+
 @end

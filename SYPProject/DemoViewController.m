@@ -13,6 +13,8 @@
 #import "ThirdCertViewController.h"
 #import "PuzzleViewController.h"
 #import "GitDemoViewController.h"
+#import "TestTableViewController.h"
+#import "MyTestViewController.h"
 @interface DemoViewController ()
 
 @end
@@ -70,23 +72,41 @@
             [thirdcert release];
 		}];
         
-//        [section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
-//			cell.textLabel.text = NSLocalizedString(@"拼图", @"拼图");
-//		} whenSelected:^(NSIndexPath *indexPath) {
-//			//TODO
-//            PuzzleViewController *puzzle = [[PuzzleViewController alloc] init];
-//            [self.navigationController pushViewController:puzzle animated:YES];
-//            [puzzle release];
-//		}];
-//        
-//        [section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
-//			cell.textLabel.text = NSLocalizedString(@"制作gif", @"制作gif");
-//		} whenSelected:^(NSIndexPath *indexPath) {
-//			//TODO
-//            GitDemoViewController *puzzle = [[GitDemoViewController alloc] init];
-//            [self.navigationController pushViewController:puzzle animated:YES];
-//            [puzzle release];
-//		}];
+        [section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
+			cell.textLabel.text = NSLocalizedString(@"uitableview", @"uitableview");
+		} whenSelected:^(NSIndexPath *indexPath) {
+			//TODO
+            TestTableViewController *table = [[TestTableViewController alloc] init];
+            [self.navigationController pushViewController:table animated:YES];
+            [table release];
+		}];
+        
+        [section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
+			cell.textLabel.text = NSLocalizedString(@"拼图", @"拼图");
+		} whenSelected:^(NSIndexPath *indexPath) {
+			//TODO
+            PuzzleViewController *puzzle = [[PuzzleViewController alloc] init];
+            [self.navigationController pushViewController:puzzle animated:YES];
+            [puzzle release];
+		}];
+        
+        [section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
+			cell.textLabel.text = NSLocalizedString(@"制作gif", @"制作gif");
+		} whenSelected:^(NSIndexPath *indexPath) {
+			//TODO
+            GitDemoViewController *puzzle = [[GitDemoViewController alloc] init];
+            [self.navigationController pushViewController:puzzle animated:YES];
+            [puzzle release];
+		}];
+        
+        [section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
+			cell.textLabel.text = NSLocalizedString(@"测试视频", @"测试视频");
+		} whenSelected:^(NSIndexPath *indexPath) {
+			//TODO
+            MyTestViewController *camera = [[MyTestViewController alloc] init];
+            [self.navigationController pushViewController:camera animated:YES];
+            [camera release];
+		}];
 	}];
 
     

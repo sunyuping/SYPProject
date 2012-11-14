@@ -84,6 +84,11 @@ static NSString *jjEmotions = @"[jj01],[jj02],[jj03],[jj04],[jj05],[jj06],[jj07]
     NetworkStatus b = [tmp currentReachabilityStatus];
 }
 -(void)test:(UIButton*)btn{
+    
+
+    NSURL*url=[NSURL URLWithString:@"prefs:root=General&path=Network"];
+    [[UIApplication sharedApplication] openURL:url];
+   
     // [self performSelector:@selector(aaaa)];
 
 }

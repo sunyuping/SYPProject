@@ -85,6 +85,9 @@
 		9B797618162FC66F0073F794 /* QQWeiboAuthorizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B797617162FC66F0073F794 /* QQWeiboAuthorizeView.m */; };
 		9B79761D162FC6970073F794 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B79761B162FC6970073F794 /* close.png */; };
 		9B79761E162FC6970073F794 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B79761C162FC6970073F794 /* close@2x.png */; };
+		9B79821F1640D7EF008A26C6 /* THCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B79821C1640D7EF008A26C6 /* THCapture.m */; };
+		9B7982201640D7EF008A26C6 /* THCaptureUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B79821E1640D7EF008A26C6 /* THCaptureUtilities.m */; };
+		9B79822C16412622008A26C6 /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B79822B16412621008A26C6 /* TestTableViewController.m */; };
 		9B799C32163673130085A6A5 /* img01.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B799C27163673130085A6A5 /* img01.png */; };
 		9B799C33163673130085A6A5 /* img02.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B799C28163673130085A6A5 /* img02.png */; };
 		9B799C34163673130085A6A5 /* img03.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B799C29163673130085A6A5 /* img03.png */; };
@@ -403,6 +406,12 @@
 		9B797617162FC66F0073F794 /* QQWeiboAuthorizeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQWeiboAuthorizeView.m; sourceTree = "<group>"; };
 		9B79761B162FC6970073F794 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		9B79761C162FC6970073F794 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		9B79821B1640D7EF008A26C6 /* THCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCapture.h; sourceTree = "<group>"; };
+		9B79821C1640D7EF008A26C6 /* THCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCapture.m; sourceTree = "<group>"; };
+		9B79821D1640D7EF008A26C6 /* THCaptureUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCaptureUtilities.h; sourceTree = "<group>"; };
+		9B79821E1640D7EF008A26C6 /* THCaptureUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCaptureUtilities.m; sourceTree = "<group>"; };
+		9B79822A1641261F008A26C6 /* TestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
+		9B79822B16412621008A26C6 /* TestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
 		9B799C27163673130085A6A5 /* img01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img01.png; sourceTree = "<group>"; };
 		9B799C28163673130085A6A5 /* img02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img02.png; sourceTree = "<group>"; };
 		9B799C29163673130085A6A5 /* img03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img03.png; sourceTree = "<group>"; };
@@ -678,6 +687,8 @@
 				9BD7748614BD7A52006B9F80 /* Test_MKNetworkKit.m */,
 				9BC1986C14B3F88F0052E6EA /* MyTestViewController.h */,
 				9BC1986D14B3F88F0052E6EA /* MyTestViewController.m */,
+				9B79822A1641261F008A26C6 /* TestTableViewController.h */,
+				9B79822B16412621008A26C6 /* TestTableViewController.m */,
 				9B0584C714B3398000CF4DFC /* Supporting Files */,
 			);
 			path = SYPProject;
@@ -799,6 +810,7 @@
 		9B117BFE162BF0720000AEF3 /* thirdlib */ = {
 			isa = PBXGroup;
 			children = (
+				9B79821A1640D7EF008A26C6 /* THCapture */,
 				9B715918163E6C3200DD8F26 /* GitDemoViewController.h */,
 				9B715919163E6C3200DD8F26 /* GitDemoViewController.m */,
 				9BE1F636163E9600007BF94D /* UIImagePixelSource.h */,
@@ -1117,6 +1129,17 @@
 				9B79761C162FC6970073F794 /* close@2x.png */,
 			);
 			path = image;
+			sourceTree = "<group>";
+		};
+		9B79821A1640D7EF008A26C6 /* THCapture */ = {
+			isa = PBXGroup;
+			children = (
+				9B79821B1640D7EF008A26C6 /* THCapture.h */,
+				9B79821C1640D7EF008A26C6 /* THCapture.m */,
+				9B79821D1640D7EF008A26C6 /* THCaptureUtilities.h */,
+				9B79821E1640D7EF008A26C6 /* THCaptureUtilities.m */,
+			);
+			path = THCapture;
 			sourceTree = "<group>";
 		};
 		9B799C26163673130085A6A5 /* res */ = {
@@ -1584,6 +1607,9 @@
 				9BE1F623163E72A8007BF94D /* AGIPCGridItem.m in Sources */,
 				9BE1F624163E72A8007BF94D /* AGIPCToolbarItem.m in Sources */,
 				9BE1F625163E72A8007BF94D /* ALAsset+AGIPC.m in Sources */,
+				9B79821F1640D7EF008A26C6 /* THCapture.m in Sources */,
+				9B7982201640D7EF008A26C6 /* THCaptureUtilities.m in Sources */,
+				9B79822C16412622008A26C6 /* TestTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
