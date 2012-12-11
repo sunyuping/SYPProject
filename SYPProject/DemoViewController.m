@@ -15,6 +15,9 @@
 #import "GitDemoViewController.h"
 #import "TestTableViewController.h"
 #import "MyTestViewController.h"
+
+#import "StyleListTableViewController.h"
+
 @interface DemoViewController ()
 
 @end
@@ -107,6 +110,16 @@
             [self.navigationController pushViewController:camera animated:YES];
             [camera release];
 		}];
+        
+        [section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
+			cell.textLabel.text = NSLocalizedString(@"自定义列表样式", @"自定义列表样式");
+		} whenSelected:^(NSIndexPath *indexPath) {
+			//TODO
+            StyleListTableViewController *tableview = [[StyleListTableViewController alloc] init];
+            [self.navigationController pushViewController:tableview animated:YES];
+            [tableview release];
+		}];
+        
 	}];
 
     

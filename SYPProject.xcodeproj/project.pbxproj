@@ -19,6 +19,9 @@
 		9B117C0B162BF0720000AEF3 /* JMStaticContentTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B117C06162BF0720000AEF3 /* JMStaticContentTableViewSection.m */; };
 		9B117C0C162BF0720000AEF3 /* StaticTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B117C08162BF0720000AEF3 /* StaticTextFieldTableViewCell.m */; };
 		9B17F4881623C31E00AA9B0D /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B17F4861623C31E00AA9B0D /* UncaughtExceptionHandler.m */; };
+		9B22638816538DBE006A5EFA /* YPStyledTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B22638716538DBE006A5EFA /* YPStyledTableViewCell.m */; };
+		9B22638D16539120006A5EFA /* DemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B22638C16539120006A5EFA /* DemoTableViewController.m */; };
+		9B22639016539693006A5EFA /* StyleListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B22638F16539693006A5EFA /* StyleListTableViewController.m */; };
 		9B351DC814C3C3E0002F8283 /* RRFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B351DC514C3C3E0002F8283 /* RRFileHandle.m */; };
 		9B351DC914C3C3E0002F8283 /* RRFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B351DC714C3C3E0002F8283 /* RRFileManager.m */; };
 		9B351DF614C3D026002F8283 /* RRLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B351DED14C3D025002F8283 /* RRLog.m */; };
@@ -241,6 +244,12 @@
 		9B117C08162BF0720000AEF3 /* StaticTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTextFieldTableViewCell.m; sourceTree = "<group>"; };
 		9B17F4861623C31E00AA9B0D /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
 		9B17F4871623C31E00AA9B0D /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		9B22638616538DBE006A5EFA /* YPStyledTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPStyledTableViewCell.h; sourceTree = "<group>"; };
+		9B22638716538DBE006A5EFA /* YPStyledTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPStyledTableViewCell.m; sourceTree = "<group>"; };
+		9B22638B16539120006A5EFA /* DemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTableViewController.h; sourceTree = "<group>"; };
+		9B22638C16539120006A5EFA /* DemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableViewController.m; sourceTree = "<group>"; };
+		9B22638E16539693006A5EFA /* StyleListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleListTableViewController.h; sourceTree = "<group>"; };
+		9B22638F16539693006A5EFA /* StyleListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleListTableViewController.m; sourceTree = "<group>"; };
 		9B23D0331543E940009C9AB2 /* SYPSystemExpansion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SYPSystemExpansion.h; path = Categories/SYPSystemExpansion.h; sourceTree = "<group>"; };
 		9B23D0341543E940009C9AB2 /* GTMBase64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTMBase64.h; path = Categories/GTMBase64.h; sourceTree = "<group>"; };
 		9B23D0351543E940009C9AB2 /* GTMBase64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GTMBase64.m; path = Categories/GTMBase64.m; sourceTree = "<group>"; };
@@ -673,6 +682,7 @@
 			isa = PBXGroup;
 			children = (
 				9B0584D714B3398F00CF4DFC /* SYPFrameWork */,
+				9B22638A16538FEF006A5EFA /* Demos */,
 				9B0584CF14B3398000CF4DFC /* AppDelegate.h */,
 				9B0584D014B3398000CF4DFC /* AppDelegate.m */,
 				9B117BE6162BD7C50000AEF3 /* DemoViewController.h */,
@@ -839,6 +849,17 @@
 			path = JMStaticContentTableViewController;
 			sourceTree = "<group>";
 		};
+		9B22638A16538FEF006A5EFA /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				9B22638B16539120006A5EFA /* DemoTableViewController.h */,
+				9B22638C16539120006A5EFA /* DemoTableViewController.m */,
+				9B22638E16539693006A5EFA /* StyleListTableViewController.h */,
+				9B22638F16539693006A5EFA /* StyleListTableViewController.m */,
+			);
+			path = Demos;
+			sourceTree = "<group>";
+		};
 		9B351DC014C3C1E2002F8283 /* RRDefine */ = {
 			isa = PBXGroup;
 			children = (
@@ -976,6 +997,8 @@
 				9B6C5783162D50780049A00E /* BlockUI.h */,
 				9B6C577E162D504B0049A00E /* YPAlertView.h */,
 				9B6C577F162D504B0049A00E /* YPAlertView.m */,
+				9B22638616538DBE006A5EFA /* YPStyledTableViewCell.h */,
+				9B22638716538DBE006A5EFA /* YPStyledTableViewCell.m */,
 			);
 			path = UIControls;
 			sourceTree = "<group>";
@@ -1610,6 +1633,9 @@
 				9B79821F1640D7EF008A26C6 /* THCapture.m in Sources */,
 				9B7982201640D7EF008A26C6 /* THCaptureUtilities.m in Sources */,
 				9B79822C16412622008A26C6 /* TestTableViewController.m in Sources */,
+				9B22638816538DBE006A5EFA /* YPStyledTableViewCell.m in Sources */,
+				9B22638D16539120006A5EFA /* DemoTableViewController.m in Sources */,
+				9B22639016539693006A5EFA /* StyleListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
