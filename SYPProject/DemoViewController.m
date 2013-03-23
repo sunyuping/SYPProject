@@ -53,6 +53,10 @@
             RichTextKitViewController *richTextKit = [[RichTextKitViewController alloc]init];
             [self.navigationController pushViewController:richTextKit animated:YES];
             [richTextKit release];
+            [iConsole log:@"unrecognised command, try 'log' instead"];
+            [iConsole info:@"unrecognised command, try 'info' instead"];
+            [iConsole warn:@"unrecognised command, try 'warn' instead"];
+            [iConsole error:@"unrecognised command, try 'error' instead"];
 		}];
         
 		[section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
@@ -115,13 +119,31 @@
 			cell.textLabel.text = NSLocalizedString(@"自定义列表样式", @"自定义列表样式");
 		} whenSelected:^(NSIndexPath *indexPath) {
 			//TODO
-            StyleListTableViewController *tableview = [[StyleListTableViewController alloc] init];
-            [self.navigationController pushViewController:tableview animated:YES];
-            [tableview release];
+            [iConsole show];
+            
+//            StyleListTableViewController *tableview = [[StyleListTableViewController alloc] init];
+//            [self.navigationController pushViewController:tableview animated:YES];
+//            [tableview release];
 		}];
         
 	}];
 
+    
+    [iConsole sharedConsole].delegate = self;
+	
+	int touches = (TARGET_IPHONE_SIMULATOR ? [iConsole sharedConsole].simulatorTouchesToShow: [iConsole sharedConsole].deviceTouchesToShow);
+	if (touches > 0 && touches < 11)
+	{
+//		self.swipeLabel.text = [NSString stringWithFormat:
+//								@"\nSwipe up with %i finger%@ to show the console",
+//								touches, (touches != 1)? @"s": @""];
+	}
+	else if (TARGET_IPHONE_SIMULATOR ? [iConsole sharedConsole].simulatorShakeToShow: [iConsole sharedConsole].deviceShakeToShow)
+	{
+//		self.swipeLabel.text = @"\nShake device to show the console";
+	}
+
+    
     
     //测试科大讯飞
     // TestKeDaViewController *mytestviewcontrol = [[TestKeDaViewController alloc] init];
@@ -145,5 +167,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)handleConsoleCommand:(NSString *)command{
+    
+    
+    
+}
 @end

@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "JMStaticContentTableViewController.h"
+#import "iConsole.h"
 
-@interface DemoViewController : JMStaticContentTableViewController
+
+@interface DemoViewController : JMStaticContentTableViewController<iConsoleDelegate>
 
 @end

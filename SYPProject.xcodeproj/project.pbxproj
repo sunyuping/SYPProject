@@ -60,6 +60,8 @@
 		9B6C5793162D518A0049A00E /* alert-window.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C578B162D518A0049A00E /* alert-window.png */; };
 		9B6C5794162D518A0049A00E /* alert-window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C578C162D518A0049A00E /* alert-window@2x.png */; };
 		9B6C5796162D53A90049A00E /* BlockBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C5782162D50780049A00E /* BlockBackground.m */; };
+		9B6D24C616FD9E6C0086010B /* GTMStackTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6D24C216FD9E6C0086010B /* GTMStackTrace.m */; };
+		9B6D24C716FD9E6C0086010B /* iConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6D24C516FD9E6C0086010B /* iConsole.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		9B7158FF163E6BF000DD8F26 /* ANGifEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7158C6163E6BF000DD8F26 /* ANGifEncoder.m */; };
 		9B715900163E6BF000DD8F26 /* ANGifGraphicControlExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7158C8163E6BF000DD8F26 /* ANGifGraphicControlExt.m */; };
 		9B715901163E6BF000DD8F26 /* ANGifLogicalScreenDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7158CA163E6BF000DD8F26 /* ANGifLogicalScreenDesc.m */; };
@@ -360,6 +362,10 @@
 		9B6C578B162D518A0049A00E /* alert-window.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alert-window.png"; sourceTree = "<group>"; };
 		9B6C578C162D518A0049A00E /* alert-window@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alert-window@2x.png"; sourceTree = "<group>"; };
 		9B6C5795162D52220049A00E /* YPUIControls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPUIControls.h; sourceTree = "<group>"; };
+		9B6D24C116FD9E6C0086010B /* GTMStackTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMStackTrace.h; sourceTree = "<group>"; };
+		9B6D24C216FD9E6C0086010B /* GTMStackTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMStackTrace.m; sourceTree = "<group>"; };
+		9B6D24C416FD9E6C0086010B /* iConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iConsole.h; sourceTree = "<group>"; };
+		9B6D24C516FD9E6C0086010B /* iConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iConsole.m; sourceTree = "<group>"; };
 		9B7158C5163E6BF000DD8F26 /* ANGifEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANGifEncoder.h; sourceTree = "<group>"; };
 		9B7158C6163E6BF000DD8F26 /* ANGifEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANGifEncoder.m; sourceTree = "<group>"; };
 		9B7158C7163E6BF000DD8F26 /* ANGifGraphicControlExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANGifGraphicControlExt.h; sourceTree = "<group>"; };
@@ -723,6 +729,7 @@
 		9B0584D714B3398F00CF4DFC /* SYPFrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				9B6D24BF16FD9E6C0086010B /* debug */,
 				9BE1F5FE163E72A8007BF94D /* AGImagePickerController */,
 				9B799C3D163676AA0085A6A5 /* picture */,
 				9B6C577D162D50280049A00E /* UIControls */,
@@ -1016,6 +1023,33 @@
 				9B6C578C162D518A0049A00E /* alert-window@2x.png */,
 			);
 			path = alertImage;
+			sourceTree = "<group>";
+		};
+		9B6D24BF16FD9E6C0086010B /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				9B6D24C016FD9E6C0086010B /* GTM */,
+				9B6D24C316FD9E6C0086010B /* iConsole */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		9B6D24C016FD9E6C0086010B /* GTM */ = {
+			isa = PBXGroup;
+			children = (
+				9B6D24C116FD9E6C0086010B /* GTMStackTrace.h */,
+				9B6D24C216FD9E6C0086010B /* GTMStackTrace.m */,
+			);
+			path = GTM;
+			sourceTree = "<group>";
+		};
+		9B6D24C316FD9E6C0086010B /* iConsole */ = {
+			isa = PBXGroup;
+			children = (
+				9B6D24C416FD9E6C0086010B /* iConsole.h */,
+				9B6D24C516FD9E6C0086010B /* iConsole.m */,
+			);
+			path = iConsole;
 			sourceTree = "<group>";
 		};
 		9B7158C4163E6BF000DD8F26 /* ANGif */ = {
@@ -1636,6 +1670,8 @@
 				9B22638816538DBE006A5EFA /* YPStyledTableViewCell.m in Sources */,
 				9B22638D16539120006A5EFA /* DemoTableViewController.m in Sources */,
 				9B22639016539693006A5EFA /* StyleListTableViewController.m in Sources */,
+				9B6D24C616FD9E6C0086010B /* GTMStackTrace.m in Sources */,
+				9B6D24C716FD9E6C0086010B /* iConsole.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
