@@ -2,9 +2,8 @@
 //  AppDelegate.m
 //  AutomaticCoder
 //
-//  Created by 张 玺 on 12-8-20.
-//  Copyright (c) 2012年 me.zhangxi. All rights reserved.
-//
+//  Created by sunyuping on 13-3-1.
+//  Copyright (c) 2013年 sunyuping. All rights reserved.//
 
 #import "AppDelegate.h"
 
@@ -37,6 +36,6 @@
 }
 
 - (IBAction)donate:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://zxapi.sinaapp.com/paypal.html"]];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.sunyuping.cn"]];
 }
 @end

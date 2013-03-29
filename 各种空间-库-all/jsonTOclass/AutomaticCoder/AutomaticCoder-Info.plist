@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>icons</string>
 	<key>CFBundleIdentifier</key>
-	<string>me.zhangxi.AutomaticCoder</string>
+	<string>me.syp.AutomaticCoder</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -27,7 +27,7 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>${MACOSX_DEPLOYMENT_TARGET}</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2012年 me.zhangxi. All rights reserved.</string>
+	<string>Copyright © 2012年 me.syp. All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
