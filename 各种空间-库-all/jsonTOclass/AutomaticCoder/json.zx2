@@ -1,0 +1,49 @@
+//
+//
+//  xingyun
+//
+//  Created by sunyuping on 13-1-23.
+//  Copyright (c) 2013年 sunyuping. All rights reserved.
+//
+#import "#name#.h"
+
+@implementation #name#
+
+
+-(id)initWithJson:(NSDictionary *)json;
+{
+    self = [super init];
+    if(self)
+    {
+    if(json != nil)
+    {
+       #config#
+    }
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    #encode#
+}
+
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super init];
+    if(self)
+    {
+        #decode#
+    }
+    return self;
+}
+
+- (NSString *) description
+{
+    NSString *result = @"";
+    #description#
+    return result;
+}
+
+@end
