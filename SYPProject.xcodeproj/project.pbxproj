@@ -162,6 +162,8 @@
 		9B99CCDE1519E3C200F1F5E4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B99CCDD1519E3C200F1F5E4 /* MessageUI.framework */; };
 		9BA539E71537D6DB000F24CA /* Test_downloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA539E61537D6DB000F24CA /* Test_downloadViewController.m */; };
 		9BA539EC1537F056000F24CA /* RNFileDownLode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA539E41537D682000F24CA /* RNFileDownLode.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		9BACAEEA172B7AF100FFD804 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BACAEE9172B7AF100FFD804 /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		9BACAEED172B7B7C00FFD804 /* TestSocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BACAEEC172B7B7C00FFD804 /* TestSocketViewController.m */; };
 		9BB97C3D14BEA33700C326A0 /* RREngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB97C3C14BEA33700C326A0 /* RREngine.m */; };
 		9BBD6E971552D6610058EEBD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBD6E961552D6610058EEBD /* OpenGLES.framework */; };
 		9BC150F9155B874700276206 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC150F8155B874700276206 /* CoreTelephony.framework */; };
@@ -504,6 +506,10 @@
 		9BA539E41537D682000F24CA /* RNFileDownLode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RNFileDownLode.m; path = FileDownload/RNFileDownLode.m; sourceTree = "<group>"; };
 		9BA539E51537D6DB000F24CA /* Test_downloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test_downloadViewController.h; sourceTree = "<group>"; };
 		9BA539E61537D6DB000F24CA /* Test_downloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test_downloadViewController.m; sourceTree = "<group>"; };
+		9BACAEE8172B7AF100FFD804 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		9BACAEE9172B7AF100FFD804 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		9BACAEEB172B7B7C00FFD804 /* TestSocketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSocketViewController.h; sourceTree = "<group>"; };
+		9BACAEEC172B7B7C00FFD804 /* TestSocketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSocketViewController.m; sourceTree = "<group>"; };
 		9BB97C3B14BEA33700C326A0 /* RREngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RREngine.h; sourceTree = "<group>"; };
 		9BB97C3C14BEA33700C326A0 /* RREngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RREngine.m; sourceTree = "<group>"; };
 		9BBD6E961552D6610058EEBD /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -729,6 +735,7 @@
 		9B0584D714B3398F00CF4DFC /* SYPFrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				9BACAEE7172B7AF100FFD804 /* cocoAsyncSocket */,
 				9B6D24BF16FD9E6C0086010B /* debug */,
 				9BE1F5FE163E72A8007BF94D /* AGImagePickerController */,
 				9B799C3D163676AA0085A6A5 /* picture */,
@@ -863,6 +870,8 @@
 				9B22638C16539120006A5EFA /* DemoTableViewController.m */,
 				9B22638E16539693006A5EFA /* StyleListTableViewController.h */,
 				9B22638F16539693006A5EFA /* StyleListTableViewController.m */,
+				9BACAEEB172B7B7C00FFD804 /* TestSocketViewController.h */,
+				9BACAEEC172B7B7C00FFD804 /* TestSocketViewController.m */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -1332,6 +1341,15 @@
 			name = DownLoad;
 			sourceTree = "<group>";
 		};
+		9BACAEE7172B7AF100FFD804 /* cocoAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				9BACAEE8172B7AF100FFD804 /* GCDAsyncSocket.h */,
+				9BACAEE9172B7AF100FFD804 /* GCDAsyncSocket.m */,
+			);
+			path = cocoAsyncSocket;
+			sourceTree = "<group>";
+		};
 		9BC198BD14B430930052E6EA /* SYPSingleton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1672,6 +1690,8 @@
 				9B22639016539693006A5EFA /* StyleListTableViewController.m in Sources */,
 				9B6D24C616FD9E6C0086010B /* GTMStackTrace.m in Sources */,
 				9B6D24C716FD9E6C0086010B /* iConsole.m in Sources */,
+				9BACAEEA172B7AF100FFD804 /* GCDAsyncSocket.m in Sources */,
+				9BACAEED172B7B7C00FFD804 /* TestSocketViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

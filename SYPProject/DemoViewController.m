@@ -15,6 +15,8 @@
 #import "GitDemoViewController.h"
 #import "TestTableViewController.h"
 #import "MyTestViewController.h"
+#import "TestSocketViewController.h"
+
 
 #import "StyleListTableViewController.h"
 
@@ -119,11 +121,19 @@
 			cell.textLabel.text = NSLocalizedString(@"自定义列表样式", @"自定义列表样式");
 		} whenSelected:^(NSIndexPath *indexPath) {
 			//TODO
-            [iConsole show];
+//            [iConsole show];
             
-//            StyleListTableViewController *tableview = [[StyleListTableViewController alloc] init];
-//            [self.navigationController pushViewController:tableview animated:YES];
-//            [tableview release];
+            StyleListTableViewController *tableview = [[StyleListTableViewController alloc] init];
+            [self.navigationController pushViewController:tableview animated:YES];
+            [tableview release];
+		}];
+        [section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
+			cell.textLabel.text = NSLocalizedString(@"socket", @"socket");
+		} whenSelected:^(NSIndexPath *indexPath) {
+			//TODO
+            TestSocketViewController *socketCon = [[TestSocketViewController alloc] init];
+            [self.navigationController pushViewController:socketCon animated:YES];
+            [socketCon release];
 		}];
         
 	}];
