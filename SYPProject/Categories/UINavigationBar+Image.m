@@ -7,6 +7,7 @@
 //
 
 #import "UINavigationBar+Image.h"
+#import "UIImage+PKImage.h"
 static UIImage *navigationBarImage = nil;
 
 

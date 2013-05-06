@@ -55,7 +55,7 @@
     [self.imageView setImage:image];
     [self.imageView setNeedsLayout];
 }
-- (void) LoadImageWithUrl:(NSString *) strURL:(BOOL) force{
+- (void) LoadImageWithUrl:(NSString *) strURL isNeedRefash:(BOOL) force{
     if (strURL == nil) {
         
         return;
@@ -104,7 +104,7 @@
 
 - (void) LoadImageWithUrl:(NSString *) strURL  
 {  
-    [self LoadImageWithUrl:strURL:NO];
+    [self LoadImageWithUrl:strURL isNeedRefash:NO];
 }
 - (void)setImageWithUrl:(NSString*)url{
     if (url == nil) {

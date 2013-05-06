@@ -7,6 +7,8 @@
 //
 
 #import "UIImageAddition.h"
+#import "UIImage+PKImage.h"
+
 
 static void AddRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWidth,
 								 float ovalHeight)

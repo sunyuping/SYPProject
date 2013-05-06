@@ -47,7 +47,7 @@
  * strURL：设置控件的url地址.
  * force：true表示强制更新
  */
-- (void)LoadImageWithUrl:(NSString *) strURL:(BOOL) force;  
+- (void)LoadImageWithUrl:(NSString *) strURL isNeedRefash:(BOOL) force;
 /**
  * strURL：设置控件的image.
  */

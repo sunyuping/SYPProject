@@ -5151,6 +5151,12 @@ enum GCDAsyncSocketConfig
 {
 	if ([data length] == 0) return;
 	
+    NSData *unzipData = [data zlibInflate];
+    if (unzipData != nil && unzipData.length >0) {
+        NSString *httpResponse = [[NSString alloc] initWithData:unzipData encoding:NSUTF8StringEncoding];
+        NSLog(@"bbbbbb:\n%@", httpResponse);
+        
+    }
 	GCDAsyncWritePacket *packet = [[GCDAsyncWritePacket alloc] initWithData:data timeout:timeout tag:tag];
 	
 	dispatch_async(socketQueue, ^{ @autoreleasepool {

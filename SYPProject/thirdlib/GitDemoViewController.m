@@ -194,7 +194,7 @@
 #if !__has_feature(objc_arc)
     [extension release];
 #endif
-    float numberOfFrames = (float)[self.images count];
+//    float numberOfFrames = (float)[self.images count];
     for (int i = 0; i < [self.images count]; i++) {
         //float progress = 0.1 + ((0.9 / (float)numberOfFrames) * (float)i);
         NSLog(@"syp=%@",[NSString stringWithFormat:@"Resizing Frame (%d/%d)", i + 1, (int)[self.images count]]);

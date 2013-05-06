@@ -7,8 +7,11 @@
 //
 
 #import "UIBarButtonItem+Image.h"
-
+#import "UIImage+PKImage.h"
 #import "PKResManager.h"
+#import "UIFont+PKFont.h"
+
+
 
 @implementation UIBarButtonItem (CustomImage)
 

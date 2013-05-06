@@ -37,7 +37,8 @@ RR_IMPLETEMENT_SINGLETON(RRLog,defaultLog)
   //  [super dealloc];
     RRRelease(_dateFormatter);
     RRRelease(_logString);
-    RRRelease(_fileHandle);                
+    RRRelease(_fileHandle);
+    [super dealloc];
 }
 
 -(void)write:(const char*)tag fileName:(const char*) filename functionName:(const char*) functionName lineNum:(int)lineNum format:(const char*)format arg:(va_list) arg{

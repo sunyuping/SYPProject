@@ -115,7 +115,6 @@ static NSOperationQueue *_sharedNetworkQueue;
 #pragma mark Memory Mangement
 
 -(void) dealloc {
-    [super dealloc];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:kReachabilityChangedNotification object:nil];
 #if TARGET_OS_IPHONE    
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidReceiveMemoryWarningNotification object:nil];

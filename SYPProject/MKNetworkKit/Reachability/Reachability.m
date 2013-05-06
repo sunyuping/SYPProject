@@ -148,7 +148,6 @@ static void TMReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
 
 -(void)dealloc
 {
-    [super dealloc];
     [self stopNotifier];
     if(self.reachabilityRef)
     {

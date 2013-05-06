@@ -220,7 +220,7 @@
 		strm.avail_out = [decompressed length] - strm.total_out;
 		
 		// Inflate another chunk.
-		status = inflate (&strm, Z_FINISH);
+		status = inflate (&strm, Z_SYNC_FLUSH);
 		if (status == Z_STREAM_END) done = YES;
 		else if (status != Z_OK) break;
 	}
@@ -266,7 +266,7 @@
 		strm.next_out = [compressed mutableBytes] + strm.total_out;
 		strm.avail_out = [compressed length] - strm.total_out;
 		
-		deflate(&strm, Z_SYNC_FLUSH);
+		deflate(&strm, Z_FINISH);
 		
 	} while (strm.avail_out == 0);
 	

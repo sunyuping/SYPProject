@@ -7,6 +7,9 @@
 //
 
 #import "UIToolbar+Image.h"
+#import "UIFont+PKFont.h"
+#import "UIImage+PKImage.h"
+
 
 static UIImage *toolBarImage = nil;
 

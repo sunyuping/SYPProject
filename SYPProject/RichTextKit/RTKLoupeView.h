@@ -38,5 +38,5 @@
 	bool _animated;
 }
 @property(nonatomic, retain) UIView *magnifyView;
-@property(assign) CGPoint touchPoint;
+@property(nonatomic, assign) CGPoint touchPoint;
 @end

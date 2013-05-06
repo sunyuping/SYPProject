@@ -76,7 +76,7 @@
 #pragma mark UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
 	if (picker.sourceType==UIImagePickerControllerSourceTypeCamera) {
-		UIImage *originalImage=[info objectForKey:UIImagePickerControllerOriginalImage];
+//		UIImage *originalImage=[info objectForKey:UIImagePickerControllerOriginalImage];
         
 		//Can i add label here?
 //		UIView *cropOverlay=[self findView:picker.view withName:@"PLCropOverlay"];

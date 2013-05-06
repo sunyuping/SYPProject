@@ -10,7 +10,7 @@
 #import "GCDAsyncSocket.h"
 
 
-#define HOST @"10.0.1.83"
+#define HOST @"10.0.1.45"
 #define PORT 54321
 
 @interface TestSocketViewController ()
@@ -107,26 +107,27 @@ static int socketid = 1;
 	NSLog(@"socket:%p didWriteDataWithTag:%ld", sock, tag);
     //     [asyncSocket readDataWithTimeout:-1 tag:tag];
 }
-
+static int tmpNumber = 0;
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
-	NSLog(@"socket:%p didReadData:withTag:%ld", sock, tag);
-    
+
+    tmpNumber++;
+	NSLog(@"socket:%p didReadData:withTag:=================%d", sock, tmpNumber);
     NSData *unzipData = [data zlibInflate];
     if (unzipData == nil || unzipData.length <=0) {
-        NSString *httpResponse = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"aaaaa Response:\n%@", httpResponse);
+//        NSString *httpResponse = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//        NSLog(@"aaaaa Response:\n%@", httpResponse);
         [sock readDataWithTimeout:-1 tag:2];
         return;
     }
     
-	NSString *httpResponse = [[NSString alloc] initWithData:unzipData encoding:NSUTF8StringEncoding];
-	NSLog(@"HTTP Response:\n%@", httpResponse);
+//	NSString *httpResponse = [[NSString alloc] initWithData:unzipData encoding:NSUTF8StringEncoding];
+//	NSLog(@"HTTP Response:\n%@", httpResponse);
     
-    NSDictionary *resault = [unzipData objectFromJSONData];
-    
-    NSLog(@"HTTP resault:\n%@", resault);
-    
+//    NSDictionary *resault = [unzipData objectFromJSONData];
+//    
+//    NSLog(@"HTTP resault:\n%@", resault);
+//    
     
 	socketid++;
     [sock readDataWithTimeout:-1 tag:2];
@@ -139,17 +140,21 @@ static int socketid = 1;
 
 
 -(void)testauthenticate{
-    //唯一的验证
-    NSString *keyV = [NSString stringWithFormat:@"xy_asdafsfdgdg"];
-    NSDictionary *msg = [NSDictionary dictionaryWithObjectsAndKeys:@"dasdsadasdasdas",@"token",[keyV md5],@"v", nil];
-    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"xy_%d",socketid],@"id", [NSNumber numberWithInt:1],@"type",msg,@"msg",nil];
-    
-    NSData *datainfo = [dic JSONData];
-    NSMutableData *dataTmp = [NSMutableData dataWithData:datainfo];
-    NSData *enterStr =[@"\r\n" dataUsingEncoding:NSUTF8StringEncoding];
-    [dataTmp appendData:enterStr];
-    
-    [asyncSocket writeData:[dataTmp zlibDeflate] withTimeout:-1 tag:1];
+//    for (int i=0; i<10000; i++) {
+        //唯一的验证
+        NSString *keyV = [NSString stringWithFormat:@"xy_asdafsfdgdg"];
+        NSDictionary *msg = [NSDictionary dictionaryWithObjectsAndKeys:@"dasdsadasdasdas",@"token",[keyV md5],@"v", nil];
+        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"xy_%d",1],@"id", [NSNumber numberWithInt:1],@"type",msg,@"msg",nil];
+        
+        NSData *datainfo = [dic JSONData];
+        NSMutableData *dataTmp = [NSMutableData dataWithData:datainfo];
+        NSData *enterStr =[@"\r\n" dataUsingEncoding:NSUTF8StringEncoding];
+        [dataTmp appendData:enterStr];
+        
+        [asyncSocket writeData:[dataTmp zlibDeflate] withTimeout:-1 tag:1];
+        [asyncSocket readDataWithTimeout:-1 tag:1];
+//    }
+
 }
 
 -(NSData*)testMessageSuccess{
