@@ -31,6 +31,23 @@
 #define RR_TARGET_IOS
 #endif
 */
+
+//默认多语言表
+#define RS_CURRENT_LANGUAGE_TABLE  [[NSUserDefaults standardUserDefaults] objectForKey:@"LanguageSwtich"]?[[NSUserDefaults standardUserDefaults] objectForKey:@"LanguageSwtich"]:@"zh-Hans"
+
+//系统当前语言
+#define SYSTEM_NOW_LANGUAGE [[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"] objectAtIndex:0]
+
+//程序语言设置
+#define RS_LANGUAGE_TYPE_SET(value)     [[NSUserDefaults standardUserDefaults] setValue:value forKey:@"LanguageSwtich"]
+
+#define RELEASE(__POINTER) { if (nil != (__POINTER)) { CFRelease(__POINTER); __POINTER = nil; } }
+
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f \
+alpha:(a)]
+
 #define RR_ALWAYS_INLINE    __attribute__((always_inline))
 #define RR_UNUSED_RESULT    __attribute__((warn_unused_result))
 #ifdef __cplusplus

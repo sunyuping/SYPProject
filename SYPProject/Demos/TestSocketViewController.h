@@ -14,5 +14,8 @@
 @interface TestSocketViewController : UIViewController
 {
 	GCDAsyncSocket *asyncSocket;
+    dispatch_queue_t delegateQueue;
+	
+	dispatch_queue_t socketQueue;
 }
 @end

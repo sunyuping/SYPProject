@@ -57,7 +57,26 @@
 //    center.callEventHandler = ^(CTCall *call) {
 //        NSLog ( @"call:%@" , [call description]);
 //    };
-//    
+//
+    
+    dispatch_source_t source, timer;
+    
+    source = dispatch_source_create(DISPATCH_SOURCE_TYPE_DATA_ADD, 0, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
+    dispatch_source_set_event_handler(source, ^{
+        printf("hello\n");
+    });
+    dispatch_resume(source);
+    
+    timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
+    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, 1ull * NSEC_PER_SEC, 0);
+    dispatch_source_set_event_handler(timer, ^{
+        dispatch_source_merge_data(source, 1);
+    });
+    dispatch_resume(timer);
+    
+//    dispatch_main();
+    
+    
     
     //注册单件类
     RRSingleton *mysingle = [RRSingleton defaultSingleton];
