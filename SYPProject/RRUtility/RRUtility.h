@@ -41,6 +41,10 @@
 + (NSString *) getPlatform;
 + (NSString *) getPlatformString;
 
+//私有api实现内存警告
+
++(void)sendMemoryWarning;
+
 @end
 
 

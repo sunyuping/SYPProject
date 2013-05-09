@@ -194,4 +194,12 @@ RR_IMPLETEMENT_SINGLETON(RRUtility,defaultUtility)
     return platform;
 }
 
++(void)sendMemoryWarning{
+    SEL memoryWarningSel = @selector(_performMemoryWarning);
+    if ([[UIApplication sharedApplication] respondsToSelector:memoryWarningSel]) {
+        [[UIApplication sharedApplication] performSelector:memoryWarningSel];
+    }else {
+        NSLog(@"%@",@"Whoops UIApplication no loger responds to -_performMemoryWarning");
+    }
+}
 @end

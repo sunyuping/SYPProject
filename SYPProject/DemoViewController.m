@@ -16,6 +16,7 @@
 #import "TestTableViewController.h"
 #import "MyTestViewController.h"
 #import "TestSocketViewController.h"
+#import "TestNibDemoViewController.h"
 
 
 #import "StyleListTableViewController.h"
@@ -132,6 +133,14 @@
 		} whenSelected:^(NSIndexPath *indexPath) {
 			//TODO
             TestSocketViewController *socketCon = [[TestSocketViewController alloc] init];
+            [self.navigationController pushViewController:socketCon animated:YES];
+            [socketCon release];
+		}];
+        [section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
+			cell.textLabel.text = NSLocalizedString(@"nib", @"nib");
+		} whenSelected:^(NSIndexPath *indexPath) {
+			//TODO
+            TestNibDemoViewController *socketCon = [[TestNibDemoViewController alloc] initWithNibName:@"KKRootViewController" bundle:[NSBundle mainBundle]];
             [self.navigationController pushViewController:socketCon animated:YES];
             [socketCon release];
 		}];

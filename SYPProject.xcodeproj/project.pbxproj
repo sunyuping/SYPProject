@@ -34,6 +34,8 @@
 		9B46C520162F9FFF009FA69D /* OpenSdkOauth.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B46C518162F9FFF009FA69D /* OpenSdkOauth.m */; };
 		9B46C521162F9FFF009FA69D /* OpenSdkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B46C51A162F9FFF009FA69D /* OpenSdkRequest.m */; };
 		9B46C522162F9FFF009FA69D /* OpenSdkResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B46C51C162F9FFF009FA69D /* OpenSdkResponse.m */; };
+		9B5978AF173BA49600AFF831 /* TestNibDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5978AE173BA49600AFF831 /* TestNibDemoViewController.m */; };
+		9B5978C5173BC8DF00AFF831 /* a.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9B5978C4173BC8DF00AFF831 /* a.zip */; };
 		9B5D1D351509CE3C00FEF1A9 /* RRCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5D1D341509CE3C00FEF1A9 /* RRCameraViewController.m */; };
 		9B60A9BB14D9012400B5670C /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B60A9AA14D9012400B5670C /* NSData+Base64.m */; };
 		9B60A9BC14D9012400B5670C /* NSDate+RFC1123.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B60A9AC14D9012400B5670C /* NSDate+RFC1123.m */; };
@@ -302,6 +304,9 @@
 		9B46C51A162F9FFF009FA69D /* OpenSdkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenSdkRequest.m; sourceTree = "<group>"; };
 		9B46C51B162F9FFF009FA69D /* OpenSdkResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenSdkResponse.h; sourceTree = "<group>"; };
 		9B46C51C162F9FFF009FA69D /* OpenSdkResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenSdkResponse.m; sourceTree = "<group>"; };
+		9B5978AD173BA49600AFF831 /* TestNibDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNibDemoViewController.h; sourceTree = "<group>"; };
+		9B5978AE173BA49600AFF831 /* TestNibDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNibDemoViewController.m; sourceTree = "<group>"; };
+		9B5978C4173BC8DF00AFF831 /* a.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = a.zip; path = res/a.zip; sourceTree = "<group>"; };
 		9B5D1D331509CE3C00FEF1A9 /* RRCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRCameraViewController.h; sourceTree = "<group>"; };
 		9B5D1D341509CE3C00FEF1A9 /* RRCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRCameraViewController.m; sourceTree = "<group>"; };
 		9B60A9A914D9012400B5670C /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
@@ -746,6 +751,7 @@
 		9B0584C714B3398000CF4DFC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9B5978C4173BC8DF00AFF831 /* a.zip */,
 				9B799C26163673130085A6A5 /* res */,
 				9BF8251B162EC1420013F3B0 /* icon.png */,
 				9BF8251C162EC1420013F3B0 /* icon@2x.png */,
@@ -847,6 +853,8 @@
 				9B22638F16539693006A5EFA /* StyleListTableViewController.m */,
 				9BACAEEB172B7B7C00FFD804 /* TestSocketViewController.h */,
 				9BACAEEC172B7B7C00FFD804 /* TestSocketViewController.m */,
+				9B5978AD173BA49600AFF831 /* TestNibDemoViewController.h */,
+				9B5978AE173BA49600AFF831 /* TestNibDemoViewController.m */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -1624,6 +1632,7 @@
 				9BE1F621163E72A8007BF94D /* AGIPCAssetsController_iPhone.xib in Resources */,
 				9BE1F626163E72A8007BF94D /* LICENSE in Resources */,
 				9BE214041738A03C00BD5CAA /* install.plist in Resources */,
+				9B5978C5173BC8DF00AFF831 /* a.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1768,6 +1777,7 @@
 				9B8D3F4D1737EB2600657D11 /* UIFont+PKFont.m in Sources */,
 				9B8D3F4E1737EB2600657D11 /* UIImage+PKImage.m in Sources */,
 				9B8D3F4F1737EB2600657D11 /* PKResManager.m in Sources */,
+				9B5978AF173BA49600AFF831 /* TestNibDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

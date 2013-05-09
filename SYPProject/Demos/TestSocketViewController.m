@@ -8,6 +8,7 @@
 
 #import "TestSocketViewController.h"
 #import "GCDAsyncSocket.h"
+#import "RRUtility.h"
 
 
 #define HOST @"10.0.1.45"
@@ -39,6 +40,14 @@ static int socketid = 1;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"a" ofType:@"zip"];
+    NSData *filedata = [NSData dataWithContentsOfFile:filePath];
+    
+    NSData *unzipfiledata = [filedata zlibInflate];
+    NSString *httpResponse = [[NSString alloc] initWithData:unzipfiledata encoding:NSUTF8StringEncoding];
+    NSLog(@"a.zip data:\n%@", httpResponse);
+    
 	// Do any additional setup after loading the view.
     //    dispatch_queue_t mainQueue = dispatch_get_main_queue();
     
@@ -74,8 +83,10 @@ static int socketid = 1;
 }
 -(void)aaa{
     //    [asyncSocket writeData:[self testMessageSuccess] withTimeout:-1 tag:2];
-    
+    	[RRUtility sendMemoryWarning];
+//    CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), (CFStringRef)@"UISimulatedMemoryWarningNotification", NULL, NULL, true);  
     [self testauthenticate];
+    
     
     //    [asyncSocket writeData:[@"100200886003\n" dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:1];
 }
@@ -87,7 +98,7 @@ static int socketid = 1;
 	NSLog(@"socket:%p didConnectToHost:%@ port:%hu", sock, host, port);
     [sock readDataWithTimeout:-1 tag:0];
     
-	
+
 }
 
 - (void)socketDidSecure:(GCDAsyncSocket *)sock
