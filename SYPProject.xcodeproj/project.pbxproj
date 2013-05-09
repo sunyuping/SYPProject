@@ -229,6 +229,7 @@
 		9BE1F626163E72A8007BF94D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9BE1F616163E72A8007BF94D /* LICENSE */; };
 		9BE1F62D163E7436007BF94D /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE1F62C163E7436007BF94D /* AssetsLibrary.framework */; };
 		9BE1F639163E977B007BF94D /* UIImagePixelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE1F637163E9600007BF94D /* UIImagePixelSource.m */; };
+		9BE214041738A03C00BD5CAA /* install.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BE214031738A03C00BD5CAA /* install.plist */; };
 		9BEB2DD114B571C300EF5BA9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BEB2DD014B571C200EF5BA9 /* GameKit.framework */; };
 		9BEB2DD414B572A100EF5BA9 /* RRLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BEB2DD314B572A100EF5BA9 /* RRLocation.m */; };
 		9BF184F416300B4000ADAB3F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF184F316300B4000ADAB3F /* Default-568h@2x.png */; };
@@ -609,6 +610,7 @@
 		9BE1F62C163E7436007BF94D /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		9BE1F636163E9600007BF94D /* UIImagePixelSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIImagePixelSource.h; sourceTree = "<group>"; };
 		9BE1F637163E9600007BF94D /* UIImagePixelSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIImagePixelSource.m; sourceTree = "<group>"; };
+		9BE214031738A03C00BD5CAA /* install.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = install.plist; sourceTree = "<group>"; };
 		9BEB2DD014B571C200EF5BA9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		9BEB2DD214B572A100EF5BA9 /* RRLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRLocation.h; sourceTree = "<group>"; };
 		9BEB2DD314B572A100EF5BA9 /* RRLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRLocation.m; sourceTree = "<group>"; };
@@ -668,6 +670,7 @@
 		9B0584B114B3398000CF4DFC = {
 			isa = PBXGroup;
 			children = (
+				9BE214031738A03C00BD5CAA /* install.plist */,
 				9BF184F816300B9700ADAB3F /* Default.png */,
 				9BF184F616300B9200ADAB3F /* Default@2x.png */,
 				9BF184F316300B4000ADAB3F /* Default-568h@2x.png */,
@@ -1620,6 +1623,7 @@
 				9BE1F620163E72A8007BF94D /* AGIPCAssetsController_iPad.xib in Resources */,
 				9BE1F621163E72A8007BF94D /* AGIPCAssetsController_iPhone.xib in Resources */,
 				9BE1F626163E72A8007BF94D /* LICENSE in Resources */,
+				9BE214041738A03C00BD5CAA /* install.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

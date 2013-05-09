@@ -24,6 +24,10 @@
 #import "UncaughtExceptionHandler.h"
 #import "DemoViewController.h"
 
+#import <CoreTelephony/CTCallCenter.h>
+#import <CoreTelephony/CTCall.h>
+
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -52,6 +56,7 @@
     info.subscriberCellularProviderDidUpdateNotifier = ^(CTCarrier *carrier) { 
         NSLog ( @"carrier:%@" , [carrier description]);
     };
+    [self detectCall];
 
 //    CTCallCenter *center = [[CTCallCenter alloc] init];
 //    center.callEventHandler = ^(CTCall *call) {
@@ -80,6 +85,8 @@
 //    dispatch_main();
     //runloop test  ！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
     
+   NSString *phoneNumber =  [[NSUserDefaults standardUserDefaults] objectForKey:@"SBFormattedPhoneNumber"];
+    NSLog(@"syp===phoneNumber=%@",phoneNumber);
     
     //注册单件类
     RRSingleton *mysingle = [RRSingleton defaultSingleton];
@@ -224,4 +231,36 @@
     }
 }
 
+
+-(void)detectCall
+{
+    CTCallCenter *callCenter = [[CTCallCenter alloc] init];
+    callCenter.callEventHandler=^(CTCall* call)
+    {
+        if (call.callState == CTCallStateDisconnected)
+        {
+            NSLog(@"Call has been disconnected");
+            
+        }
+        else if (call.callState == CTCallStateConnected)
+        {
+            NSLog(@"Call has just been connected");
+        }
+        
+        else if(call.callState == CTCallStateIncoming)
+        {
+            NSLog(@"Call is incoming");
+            
+        }
+        
+        else if (call.callState ==CTCallStateDialing)
+        {
+            NSLog(@"call is dialing");
+        }
+        else
+        {
+            NSLog(@"Nothing is done");
+        }
+    };
+}
 @end
