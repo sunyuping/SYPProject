@@ -34,6 +34,8 @@
 		9B46C520162F9FFF009FA69D /* OpenSdkOauth.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B46C518162F9FFF009FA69D /* OpenSdkOauth.m */; };
 		9B46C521162F9FFF009FA69D /* OpenSdkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B46C51A162F9FFF009FA69D /* OpenSdkRequest.m */; };
 		9B46C522162F9FFF009FA69D /* OpenSdkResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B46C51C162F9FFF009FA69D /* OpenSdkResponse.m */; };
+		9B4CF26B1745FCBC00CDB39D /* FaceDetectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4CF26A1745FCBC00CDB39D /* FaceDetectViewController.m */; };
+		9B4CF26D1745FD8700CDB39D /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4CF26C1745FD8700CDB39D /* CoreImage.framework */; };
 		9B5978AF173BA49600AFF831 /* TestNibDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5978AE173BA49600AFF831 /* TestNibDemoViewController.m */; };
 		9B5978C5173BC8DF00AFF831 /* a.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9B5978C4173BC8DF00AFF831 /* a.zip */; };
 		9B5D1D351509CE3C00FEF1A9 /* RRCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5D1D341509CE3C00FEF1A9 /* RRCameraViewController.m */; };
@@ -304,6 +306,9 @@
 		9B46C51A162F9FFF009FA69D /* OpenSdkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenSdkRequest.m; sourceTree = "<group>"; };
 		9B46C51B162F9FFF009FA69D /* OpenSdkResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenSdkResponse.h; sourceTree = "<group>"; };
 		9B46C51C162F9FFF009FA69D /* OpenSdkResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenSdkResponse.m; sourceTree = "<group>"; };
+		9B4CF2691745FCBC00CDB39D /* FaceDetectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetectViewController.h; sourceTree = "<group>"; };
+		9B4CF26A1745FCBC00CDB39D /* FaceDetectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceDetectViewController.m; sourceTree = "<group>"; };
+		9B4CF26C1745FD8700CDB39D /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		9B5978AD173BA49600AFF831 /* TestNibDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNibDemoViewController.h; sourceTree = "<group>"; };
 		9B5978AE173BA49600AFF831 /* TestNibDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNibDemoViewController.m; sourceTree = "<group>"; };
 		9B5978C4173BC8DF00AFF831 /* a.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = a.zip; path = res/a.zip; sourceTree = "<group>"; };
@@ -643,6 +648,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B4CF26D1745FD8700CDB39D /* CoreImage.framework in Frameworks */,
 				9BE1F62D163E7436007BF94D /* AssetsLibrary.framework in Frameworks */,
 				9B6C576E162D2F470049A00E /* libz.1.1.3.dylib in Frameworks */,
 				9BC150F9155B874700276206 /* CoreTelephony.framework in Frameworks */,
@@ -696,6 +702,7 @@
 		9B0584BF14B3398000CF4DFC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B4CF26C1745FD8700CDB39D /* CoreImage.framework */,
 				9BE1F62C163E7436007BF94D /* AssetsLibrary.framework */,
 				9B6C576D162D2F470049A00E /* libz.1.1.3.dylib */,
 				9BC150F8155B874700276206 /* CoreTelephony.framework */,
@@ -855,6 +862,8 @@
 				9BACAEEC172B7B7C00FFD804 /* TestSocketViewController.m */,
 				9B5978AD173BA49600AFF831 /* TestNibDemoViewController.h */,
 				9B5978AE173BA49600AFF831 /* TestNibDemoViewController.m */,
+				9B4CF2691745FCBC00CDB39D /* FaceDetectViewController.h */,
+				9B4CF26A1745FCBC00CDB39D /* FaceDetectViewController.m */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -1778,6 +1787,7 @@
 				9B8D3F4E1737EB2600657D11 /* UIImage+PKImage.m in Sources */,
 				9B8D3F4F1737EB2600657D11 /* PKResManager.m in Sources */,
 				9B5978AF173BA49600AFF831 /* TestNibDemoViewController.m in Sources */,
+				9B4CF26B1745FCBC00CDB39D /* FaceDetectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

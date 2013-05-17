@@ -18,6 +18,8 @@
 #import "TestSocketViewController.h"
 #import "TestNibDemoViewController.h"
 
+#import "FaceDetectViewController.h"
+
 
 #import "StyleListTableViewController.h"
 
@@ -137,12 +139,12 @@
             [socketCon release];
 		}];
         [section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
-			cell.textLabel.text = NSLocalizedString(@"nib", @"nib");
+			cell.textLabel.text = NSLocalizedString(@"人脸识别", @"人脸识别");
 		} whenSelected:^(NSIndexPath *indexPath) {
 			//TODO
-            TestNibDemoViewController *socketCon = [[TestNibDemoViewController alloc] initWithNibName:@"KKRootViewController" bundle:[NSBundle mainBundle]];
-            [self.navigationController pushViewController:socketCon animated:YES];
-            [socketCon release];
+            FaceDetectViewController *faceDetect = [[FaceDetectViewController alloc] init];
+            [self.navigationController pushViewController:faceDetect animated:YES];
+            [faceDetect release];
 		}];
         
 	}];
