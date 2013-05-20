@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
+   LastUpgradeVersion = "0450"
    version = "1.8">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "mkdir -p /Local/$USER/$CONFIGURATION&#10;cp -f $TARGET_BUILD_DIR/$PRODUCT_NAME /Local/$USER/$CONFIGURATION&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "013D1EFA13A5A0F100BF0A67"
+                     BuildableName = "deprotect"
+                     BlueprintName = "deprotect"
+                     ReferencedContainer = "container:class-dump.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -13,17 +32,17 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9B0584BB14B3398000CF4DFC"
-               BuildableName = "SYPProject.app"
-               BlueprintName = "SYPProject"
-               ReferencedContainer = "container:SYPProject.xcodeproj">
+               BlueprintIdentifier = "013D1EFA13A5A0F100BF0A67"
+               BuildableName = "deprotect"
+               BlueprintName = "deprotect"
+               ReferencedContainer = "container:class-dump.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
@@ -31,43 +50,39 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9B0584BB14B3398000CF4DFC"
-            BuildableName = "SYPProject.app"
-            BlueprintName = "SYPProject"
-            ReferencedContainer = "container:SYPProject.xcodeproj">
+            BlueprintIdentifier = "013D1EFA13A5A0F100BF0A67"
+            BuildableName = "deprotect"
+            BlueprintName = "deprotect"
+            ReferencedContainer = "container:class-dump.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
+      displayScaleIsEnabled = "NO"
+      displayScale = "1.00"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
-      enablesOpenGLESFrameCapture = "YES"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9B0584BB14B3398000CF4DFC"
-            BuildableName = "SYPProject.app"
-            BlueprintName = "SYPProject"
-            ReferencedContainer = "container:SYPProject.xcodeproj">
+            BlueprintIdentifier = "013D1EFA13A5A0F100BF0A67"
+            BuildableName = "deprotect"
+            BlueprintName = "deprotect"
+            ReferencedContainer = "container:class-dump.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "NSZombieEnabled"
-            value = "YES"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      displayScaleIsEnabled = "NO"
+      displayScale = "1.00"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -76,10 +91,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9B0584BB14B3398000CF4DFC"
-            BuildableName = "SYPProject.app"
-            BlueprintName = "SYPProject"
-            ReferencedContainer = "container:SYPProject.xcodeproj">
+            BlueprintIdentifier = "013D1EFA13A5A0F100BF0A67"
+            BuildableName = "deprotect"
+            BlueprintName = "deprotect"
+            ReferencedContainer = "container:class-dump.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

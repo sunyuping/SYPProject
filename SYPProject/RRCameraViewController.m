@@ -27,6 +27,14 @@
     [super loadView];
     // Implement loadView to create a view hierarchy programmatically, without using a nib.
 }
+-(void)testjson{
+    NSString *tmp = @"{\"lists\":[{\"TitleID\":1,\"photo\":\"photo/1.jpg\"},{\"TitleID\":2,\"photo\":\"photo/2.jpg\"},{\"TitleID\":3,\"photo\":\"photo/3.jpg\"},{\"TitleID\":4,\"photo\":\"photo/4.jpg\"},{\"TitleID\":5,\"photo\":\"photo/5.jpg\"},{\"TitleID\":6,\"photo\":\"photo/6.jpg\"},{\"TitleID\":7,\"photo\":\"\"}]}";
+    NSLog(@"syp====%@",tmp);
+    NSData *aa = [tmp dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:aa options:NSJSONReadingMutableContainers error:nil ];
+    NSLog(@"syp===dic=%@",dic);
+}
 
 - (void)viewDidLoad
 {
