@@ -179,7 +179,7 @@
     else if(buttonIndex !=2)
     {
         
-        UIImagePickerControllerSourceType sourceType = (buttonIndex == 0)?UIImagePickerControllerSourceTypePhotoLibrary:UIImagePickerControllerSourceTypePhotoLibrary;
+        UIImagePickerControllerSourceType sourceType = (buttonIndex == 0)?UIImagePickerControllerSourceTypePhotoLibrary:UIImagePickerControllerSourceTypeCamera;
         
         if([UIImagePickerController isSourceTypeAvailable:sourceType]) {
             UIImagePickerController *picker = [[UIImagePickerController alloc] init];
