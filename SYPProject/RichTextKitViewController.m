@@ -10,17 +10,12 @@
 #import <CoreText/CoreText.h>
 
 #import "Reachability.h"
+#import "TTStyledText.H"
+
 
 @interface RichTextKitViewController ()
 
 @end
-// 阿狸表情转义符内容及顺序
-static NSString *aliEmotions = @"[al01],[al06],[al08],[al09],[al10],[al11],[al15],[al16],[al17],[al18],[al19],[al20],[al21],[al22],[al24],[al28],[al29],[al31],[al33],[al34],[al35],[al36],[al38],[al39],[al40],[al41],[al42],[al43],[al44],[al45],[al46],[al47],[al48],[al49],[al50],[al51]";
-
-// 囧囧熊表情转义符内容及顺序
-static NSString *jjEmotions = @"[jj01],[jj02],[jj03],[jj04],[jj05],[jj06],[jj07],[jj08],[jj09],[jj10],[jj11],[jj12],[jj13],[jj14],[jj15],[jj16],[jj17],[jj18],[jj19]";
-
-
 
 
 @implementation RichTextKitViewController
@@ -37,51 +32,73 @@ static NSString *jjEmotions = @"[jj01],[jj02],[jj03],[jj04],[jj05],[jj06],[jj07]
     [super loadView];
 }
 
+- (TTStyledTextLabel *) chatMessageLabel {
+	if (!_chatMessageLabel) {
+		_chatMessageLabel = [[TTStyledTextLabel alloc] init];
+		_chatMessageLabel.contentMode = UIViewContentModeRight;
+		_chatMessageLabel.font = [UIFont systemFontOfSize:16];
+//        _chatMessageLabel.textColor = RGBCOLOR(0, 255, 0);
+        _chatMessageLabel.backgroundColor = [UIColor clearColor];
+        [self.view addSubview:_chatMessageLabel];
+        
+        _chatMessageLabel.openUrlBlock = ^(NSString *url){
+
+        };
+	}
+	return _chatMessageLabel;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    UIScreen *screen = [UIScreen mainScreen];
-    RTKView *_textview = [[RTKView alloc] initWithFrame:[screen applicationFrame] delegate:self];
+//    UIScreen *screen = [UIScreen mainScreen];
+//    RTKView *_textview = [[RTKView alloc] initWithFrame:[screen applicationFrame] delegate:self];
+//    
+////    RTKDocument *docView = [[RTKDocument alloc] initWithFrame:CGRectInset([screen applicationFrame], 5.0f, 0.0f) delegate:self];
+////    [docView setParentScrollView:self]; // TODO: move to a delegate.
+////    [self addSubview:docView];
+//    
+////    _dragEditingActive = NO;
+//    
+//    [self.view addSubview:_textview];
+//    
+//    NSString *shaoping = @"CIAC005740";
+//    NSString *md5shao = [shaoping md5];
+//    NSLog(@"syp===md5shao=%@",md5shao);
+//    
+//    NSMutableArray *md5name =[NSMutableArray arrayWithCapacity:20];
+//    
+//    NSArray *defaultEmotionsArray = [aliEmotions componentsSeparatedByString:@","];
+//    for (NSString *escapeCode in defaultEmotionsArray) {
+//        [md5name addObject:[escapeCode md5]];
+//        
+//    }
+//    NSArray *defaultEmotionsArray11 = [jjEmotions componentsSeparatedByString:@","];
+//    for (NSString *escapeCode11 in defaultEmotionsArray11) {
+//        [md5name addObject:[escapeCode11 md5]];
+//    }
+//    
+//   // NSLog(@"syp=%@",md5name);
+//    
+//    [_textview release];
+//    
+//    UIButton *test = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    test.frame = CGRectMake(10, 100, 100, 100);
+//    [self.view addSubview:test];
+//    [test addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchDown];
     
-//    RTKDocument *docView = [[RTKDocument alloc] initWithFrame:CGRectInset([screen applicationFrame], 5.0f, 0.0f) delegate:self];
-//    [docView setParentScrollView:self]; // TODO: move to a delegate.
-//    [self addSubview:docView];
+
+    self.chatMessageLabel.text	= [TTStyledText textFromXHTML:@"妙探三姐妹 乐视下半年重点投资的一部网络剧 我在这里怎么发给我你 ？废事荒时计算机直接睡觉睡觉十九世纪携家带口世界先进的肯定看着看展示的可可可<img width=\"15\" height=\"15\" class=\"emotionImage\" src=\"http://5.gaosu.com/download/pic/000/089/c0fb81580646e8e60319a743b6405470.gif\"/>定居点看到看到科学家的肯定可贷款" lineBreaks:NO URLs:YES];
     
-//    _dragEditingActive = NO;
+       self.chatMessageLabel.frame = CGRectMake(5,0,300,100);
+    [self.chatMessageLabel setNeedsLayout];
+	[self.chatMessageLabel sizeToFit];
     
-    [self.view addSubview:_textview];
-    
-    NSString *shaoping = @"CIAC005740";
-    NSString *md5shao = [shaoping md5];
-    NSLog(@"syp===md5shao=%@",md5shao);
-    
-    NSMutableArray *md5name =[NSMutableArray arrayWithCapacity:20];
-    
-    NSArray *defaultEmotionsArray = [aliEmotions componentsSeparatedByString:@","];
-    for (NSString *escapeCode in defaultEmotionsArray) {
-        [md5name addObject:[escapeCode md5]];
-        
-    }
-    NSArray *defaultEmotionsArray11 = [jjEmotions componentsSeparatedByString:@","];
-    for (NSString *escapeCode11 in defaultEmotionsArray11) {
-        [md5name addObject:[escapeCode11 md5]];
-    }
-    
-   // NSLog(@"syp=%@",md5name);
-    
-    [_textview release];
-    
-    UIButton *test = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    test.frame = CGRectMake(10, 100, 100, 100);
-    [self.view addSubview:test];
-    [test addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchDown];
-    
-    
-    Reachability *tmp = [Reachability reachabilityWithHostname:@"www.renren.com"];
-    
-    NetworkStatus a = [tmp  currentDetailReachabilityStatus];
-    NetworkStatus b = [tmp currentReachabilityStatus];
+//    Reachability *tmp = [Reachability reachabilityWithHostname:@"www.renren.com"];
+//    
+//    NetworkStatus a = [tmp  currentDetailReachabilityStatus];
+//    NetworkStatus b = [tmp currentReachabilityStatus];
 }
 -(void)test:(UIButton*)btn{
     

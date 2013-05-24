@@ -346,11 +346,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SYPProject/RichTextKitViewController.m"
-         timestampString = "373547594.344782"
+         timestampString = "391069705.369883"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "90"
-         endingLineNumber = "90"
+         startingLineNumber = "107"
+         endingLineNumber = "107"
          landmarkName = "-test:"
          landmarkType = "5">
       </FileBreakpoint>

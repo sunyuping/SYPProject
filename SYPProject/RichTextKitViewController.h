@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TTStyledTextLabel.H"
 
-@interface RichTextKitViewController : UIViewController<RTKDocumentDelegate>
+
+@interface RichTextKitViewController : UIViewController<RTKDocumentDelegate>{
+    TTStyledTextLabel* _chatMessageLabel;
+    
+}
+
+@property (nonatomic,retain)TTStyledTextLabel* chatMessageLabel;
+
 
 @end
