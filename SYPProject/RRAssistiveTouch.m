@@ -32,7 +32,7 @@
         panGesture.minimumNumberOfTouches = 1;
         panGesture.maximumNumberOfTouches = 1;
         panGesture.delegate = self;
-        [self addGestureRecognizer:panGesture];
+        [_normalBtn addGestureRecognizer:panGesture];
         [panGesture release];
         
         

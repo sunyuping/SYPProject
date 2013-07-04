@@ -181,6 +181,24 @@
     //Test_downloadViewController *mytestviewcontrol = [[Test_downloadViewController alloc]init];
     
     //  SYPTestAvCameraViewController *mytestviewcontrol = [[SYPTestAvCameraViewController alloc]init];
+    
+    
+    NSString *defaultEmotions = @"[-冷汗],[-惊讶],[-呲牙],[-财迷],[-郁闷],[-龅牙],[-发怒],[-惊悚],[-鄙视],[-色],[-投降],[-困了],[-狂怒],[-懒得理你],[-坏笑],[-嘴一个],[-委屈],[-阴险],[-怪笑],[-害羞],[-暴怒],[-流口水],[-蛋疼],[-惊呆],[-祈祷],[-吐血],[-吐],[-抠鼻],[-可怜],[-瞎笑],[-好贱],[-兔子],[-大么么],[-熊猫],[-恶魔],[-尴尬],[-抓狂],[-亲亲],[-狂骂],[-石化],[-美女],[-吐舌],[-小黄],[-狂汗],[-急眼],[-暴吐]";
+    NSArray *defaultEmotionsArray = [defaultEmotions componentsSeparatedByString:@","];
+
+    
+    //读取plist
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"plistarea" ofType:@"plist"];
+    NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
+    //更新内容
+    [data setDictionary:nil];
+    [data setObject:@"测试表情" forKey:@"emotionsName"];
+    [data setObject:defaultEmotionsArray forKey:@"emotionCodes"];
+    //输入写入
+    [data writeToFile:plistPath atomically:YES];
+    
+    [data release];
+    
 }
 
 - (void)didReceiveMemoryWarning

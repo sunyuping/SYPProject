@@ -35,6 +35,7 @@
 		775DCAE917852E390021B32D /* action_point_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 775DCAE517852E390021B32D /* action_point_normal@2x.png */; };
 		775DCAEA17852E390021B32D /* action_point_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 775DCAE617852E390021B32D /* action_point_pressed.png */; };
 		775DCAEB17852E390021B32D /* action_point_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 775DCAE717852E390021B32D /* action_point_pressed@2x.png */; };
+		776441E317858FA5001CBA19 /* plistarea.plist in Resources */ = {isa = PBXBuildFile; fileRef = 776441E217858FA5001CBA19 /* plistarea.plist */; };
 		77FC1E7717840E32003C75B3 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 77FC1E6D17840E32003C75B3 /* ioapi.c */; };
 		77FC1E7817840E32003C75B3 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 77FC1E6F17840E32003C75B3 /* mztools.c */; };
 		77FC1E7917840E32003C75B3 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 77FC1E7117840E32003C75B3 /* unzip.c */; };
@@ -425,6 +426,7 @@
 		775DCAE517852E390021B32D /* action_point_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "action_point_normal@2x.png"; sourceTree = "<group>"; };
 		775DCAE617852E390021B32D /* action_point_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = action_point_pressed.png; sourceTree = "<group>"; };
 		775DCAE717852E390021B32D /* action_point_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "action_point_pressed@2x.png"; sourceTree = "<group>"; };
+		776441E217858FA5001CBA19 /* plistarea.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = plistarea.plist; sourceTree = "<group>"; };
 		77FC1E6C17840E32003C75B3 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
 		77FC1E6D17840E32003C75B3 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
 		77FC1E6E17840E32003C75B3 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
@@ -1738,6 +1740,7 @@
 		9B799C26163673130085A6A5 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				776441E217858FA5001CBA19 /* plistarea.plist */,
 				775DCAE417852E390021B32D /* action_point_normal.png */,
 				775DCAE517852E390021B32D /* action_point_normal@2x.png */,
 				775DCAE617852E390021B32D /* action_point_pressed.png */,
@@ -2441,6 +2444,7 @@
 				775DCAE917852E390021B32D /* action_point_normal@2x.png in Resources */,
 				775DCAEA17852E390021B32D /* action_point_pressed.png in Resources */,
 				775DCAEB17852E390021B32D /* action_point_pressed@2x.png in Resources */,
+				776441E317858FA5001CBA19 /* plistarea.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
