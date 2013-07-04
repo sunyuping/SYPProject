@@ -12,7 +12,7 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "MKNetworkKit.h"
-#endif
+
 #import "RRDefines.h"
 #import "RRSingleton.h"
 #import "RRLog.h"
@@ -22,7 +22,36 @@
 #import "Addtional.h"
 
 #import "RichTextKit.h"
+#import "AudioManager.h"
+
+
+#endif
+
 
 //此appid为您所申请,请勿随意修改
 #define APPID @"4efd1b97"
 #define ENGINE_URL @"http://dev.voicecloud.cn:1028/index.htm"
+
+
+
+//声音类型定义
+typedef enum {
+    SoundEffectType_None = 0,
+    // 推送消息
+    SoundEffectType_PushMessage,
+    // 当前对话人消息
+    SoundEffectType_CurrentMessage,
+    // 发送消息
+    SoundEffectType_SendMessage,
+    // 刷新下拉消息
+    SoundEffectType_RefreshPress,
+    // 刷新松手消息
+    SoundEffectType_RefreshRelease,
+    // 刷新完毕消息
+    SoundEffectType_RefreshFinish,
+    // 收到数据之后
+    SoundEffectType_RefreshCompleted,
+} soundEffectType;
+
+
+

@@ -27,6 +27,8 @@
 #import <CoreTelephony/CTCallCenter.h>
 #import <CoreTelephony/CTCall.h>
 
+#import "RRAssistiveTouch.h"
+
 
 @implementation AppDelegate
 
@@ -57,7 +59,11 @@
         NSLog ( @"carrier:%@" , [carrier description]);
     };
     [self detectCall];
-
+    [self setupAudio];
+    
+    
+    RRAssistiveTouch *touch = [[RRAssistiveTouch alloc] initWithFrame:CGRectMake(40, 40, 55, 55)];
+    touch.hidden = NO;
 //    CTCallCenter *center = [[CTCallCenter alloc] init];
 //    center.callEventHandler = ^(CTCall *call) {
 //        NSLog ( @"call:%@" , [call description]);
@@ -150,6 +156,11 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [application setKeepAliveTimeout:600 handler:^{
+         NSLog(@"syp===后台运行");
+        
+        
+    }];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -265,4 +276,35 @@
         }
     };
 }
+- (void)setupAudio {
+    [AudioManager sharedInstance].audioPlayer = [AudioManager defaultAudioPlayer];
+    [AudioManager sharedInstance].audioRecorder = [AudioManager defaultAudioRecorder];
+    [AudioManager sharedInstance].proximityMonitoringEnabled = TRUE;
+    [AudioManager sharedInstance].replayWhenProximityChanged = TRUE;
+    
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"message" ofType:@"wav"];
+    [[AudioManager sharedInstance] createSystemSoundWithTag:SoundEffectType_PushMessage soundFile:soundPath];
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"receive_sound" ofType:@"wav"];
+    [[AudioManager sharedInstance] createSystemSoundWithTag:SoundEffectType_CurrentMessage soundFile:soundPath];
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"send_sound" ofType:@"wav"];
+    [[AudioManager sharedInstance] createSystemSoundWithTag:SoundEffectType_SendMessage soundFile:soundPath];
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"refresh_press" ofType:@"wav"];
+    [[AudioManager sharedInstance] createSystemSoundWithTag:SoundEffectType_RefreshPress soundFile:soundPath];
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"refresh_release" ofType:@"wav"];
+    [[AudioManager sharedInstance] createSystemSoundWithTag:SoundEffectType_RefreshRelease soundFile:soundPath];
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"refresh_finish" ofType:@"wav"];
+    [[AudioManager sharedInstance] createSystemSoundWithTag:SoundEffectType_RefreshFinish soundFile:soundPath];
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"refresh" ofType:@"wav"];
+    [[AudioManager sharedInstance] createSystemSoundWithTag:SoundEffectType_RefreshCompleted soundFile:soundPath];
+    //铃音
+    soundPath = [[NSBundle mainBundle] pathForResource:@"newmessage" ofType:@"wav"];
+    [[AudioManager sharedInstance] createSystemSoundWithTag:SoundEffectType_RefreshFinish soundFile:soundPath];
+}
+
 @end

@@ -157,7 +157,7 @@
 		unz_global_info  globalInfo = {0};
 		if( unzGetGlobalInfo(_unzFile, &globalInfo )==UNZ_OK )
 		{
-			NSLog([NSString stringWithFormat:@"%d entries in the zip file",globalInfo.number_entry] );
+			NSLog([NSString stringWithFormat:@"%ld entries in the zip file",globalInfo.number_entry] );
 		}
 	}
 	return _unzFile!=NULL;
@@ -207,7 +207,11 @@
 		filename[fileInfo.size_filename] = '\0';
 		
 		// check if it contains directory
-		NSString * strPath = [NSString  stringWithCString:filename];
+//		NSString * strPath = [NSString  stringWithCString:filename];
+        
+        //但是由char*获取得到NSString*的转换方法使用出错，Mac默认是按UTF8编码的
+        //此处得到的 strPath为空，导致函数返回YES，但目录下无文件
+        NSString * strPath = [NSString  stringWithUTF8String:filename];   //正确！
 		BOOL isDirectory = NO;
 		if( filename[fileInfo.size_filename-1]=='/' || filename[fileInfo.size_filename-1]=='\\')
 			isDirectory = YES;

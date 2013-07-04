@@ -8,6 +8,9 @@
 
 #import "TestTableViewController.h"
 
+#import "SCLocationManager.h"
+
+
 @interface TestTableViewController ()
 
 @end
@@ -42,6 +45,18 @@
 	// Do any additional setup after loading the view.
     [self.view addSubview:self.tableview];
 
+    SCLocationManager *locmanger = [[SCLocationManager alloc] init];
+    [locmanger setKeepOpening:YES];
+    [locmanger startUpdateLocation];
+//    CLLocationManager *locManager = [[CLLocationManager alloc] init];
+//
+//    self.locationManager.delegate = self;
+//    //if([CLLocationManager locationServicesEnabled]){
+//    [self.locationManager startUpdatingLocation];
+//    //}
+//    [self.locationManager stopUpdatingHeading];
+//    self.locationManager.distanceFilter = 0.0f;
+//    self.locationManager.desiredAccuracy=kCLLocationAccuracyNearestTenMeters;
 }
 
 - (void)didReceiveMemoryWarning
